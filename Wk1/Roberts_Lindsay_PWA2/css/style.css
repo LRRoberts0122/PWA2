@@ -1,0 +1,349 @@
+/* ==============================
+            COLOR CODES
+   ==============================
+   Header Background: rgb(4,15,24,.6);
+
+*/
+
+
+/* ==============================
+            CSS RESET
+   ==============================
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+button, input, textarea {
+    outline: none;
+}
+
+
+
+/* ==============================
+           WEBSITE STYLE
+   ==============================
+   -- COLOR CODES --
+   Header Background: rgba(4,15,24,.6);
+*/
+html {
+    height: 100%;
+    background: #0f529d; /* Old browsers */
+    background:url("../images/light.png") top center no-repeat, -moz-linear-gradient(top,  #0f529d 0%, #1055a0 45%, #2376b9 89%); /* FF3.6+ */
+    background:url("../images/light.png") top center no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f529d), color-stop(45%,#1055a0), color-stop(89%,#2376b9)); /* Chrome,Safari4+ */
+    background:url("../images/light.png") top center no-repeat, -webkit-linear-gradient(top,  #0f529d 0%,#1055a0 45%,#2376b9 89%); /* Chrome10+,Safari5.1+ */
+    background:url("../images/light.png") top center no-repeat, -o-linear-gradient(top,  #0f529d 0%,#1055a0 45%,#2376b9 89%); /* Opera 11.10+ */
+    background:url("../images/light.png") top center no-repeat, -ms-linear-gradient(top,  #0f529d 0%,#1055a0 45%,#2376b9 89%); /* IE10+ */
+    background:url("../images/light.png") top center no-repeat, linear-gradient(to bottom,  #0f529d 0%,#1055a0 45%,#2376b9 89%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f529d', endColorstr='#2376b9',GradientType=0 ); /* IE6-9 */
+}
+
+body {
+    font-family: 'Signika', sans-serif;
+}
+
+header a#logo, section#CTA h1 {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+div.wrapper {
+    width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+/****** HEADER STYLE ******/
+
+header {
+    background: rgba(4,15,24,.6);
+    height: 80px;
+    width: 100%;
+}
+
+header a#logo {
+    display: block;
+    width: 280px;
+    height: 80px;
+    background-image: url("../images/logo.png");
+    float: left;
+}
+
+header form {
+    float: right;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+}
+
+/****** CTA STYLE ******/
+section#CTA {
+    clear: both;
+    min-height: 415px;
+    background: url("../images/goldfish.png") 33% 70% no-repeat;
+    position: relative;
+}
+
+section#CTA h1 {
+    display: block;
+    width: 756px;
+    height: 59px;
+    background: url("../images/ctaTitle.png") center center;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    margin-left: -378px;
+}
+
+section#CTA p {
+    color: #c4e4ff;
+    font-weight: lighter;
+}
+
+section#CTA a {
+    position: absolute;
+    top: 55%;
+    right: 30%;
+    background-color:#fe9d1c;
+    font-family: 'Signika', sans-serif;
+    font-size:24px;
+    text-decoration:none;
+    color:#fff;
+    padding:17px 40px;
+    padding-right:50px;
+    background-image: linear-gradient(bottom, rgb(254,157,28) 0%, rgb(255,196,15) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(254,157,28) 0%, rgb(255,196,15) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(254,157,28) 0%, rgb(255,196,15) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(254,157,28) 0%, rgb(255,196,15) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(254,157,28) 0%, rgb(255,196,15) 100%);
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, rgb(254,157,28)),
+            color-stop(1, rgb(255,196,15))
+    );
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 1px 0px #ffaa38, 0px 5px 0px 0px #ae6e19, 0px 10px 5px #072f5b;
+    -moz-box-shadow: inset 0px 1px 0px #ffaa38, 0px 5px 0px 0px #ae6e19, 0px 10px 5px #072f5b;
+    -o-box-shadow: inset 0px 1px 0px #ffaa38, 0px 5px 0px 0px #ae6e19, 0px 10px 5px #072f5b;
+    box-shadow: inset 0px 1px 0px #ffaa38, 0px 5px 0px 0px #ae6e19, 0px 10px 5px #072f5b;
+}
+
+section#CTA a::before {
+    background-color:#e28100;
+    background-image:url("../images/right_arrow.png");
+    background-repeat:no-repeat;
+    background-position:center center;
+    content:"";
+    width:20px;
+    height:20px;
+    position:absolute;
+    right:15px;
+    top:50%;
+    margin-top:-9px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 0px 1px 0px #73480e, 0px 1px 0px #ffbf6b;
+    -moz-box-shadow: inset 0px 1px 0px #73480e, 0px 1px 0px #ffbf6b;
+    -o-box-shadow: inset 0px 1px 0px #73480e, 0px 1px 0px #ffbf6b;
+    box-shadow: inset 0px 1px 0px #73480e, 0px 1px 0px #ffbf6b;
+}
+
+section#CTA a:hover, section#CTA a:active {
+    background-image: linear-gradient(bottom, rgb(255,196,15) 0%, rgb(254,157,28) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(255,196,15) 0%, rgb(254,157,28) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(255,196,15) 0%, rgb(254,157,28) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255,196,15) 0%, rgb(254,157,28) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(255,196,15) 0%, rgb(254,157,28) 100%);
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, rgb(255,196,15)),
+            color-stop(1, rgb(254,157,28))
+    );
+}
+
+section#CTA a:active {
+    top: 56%;
+    right: 30%;
+    -webkit-box-shadow: inset 0px 1px 0px #ffaa38, 0px 2px 0px 0px #ae6e19, 0px 5px 3px #072f5b;
+    -moz-box-shadow: inset 0px 1px 0px #ffaa38, 0px 2px 0px 0px #ae6e19, 0px 5px 3px #072f5b;
+    -o-box-shadow: inset 0px 1px 0px #ffaa38, 0px 2px 0px 0px #ae6e19, 0px 5px 3px #072f5b;
+    box-shadow: inset 0px 1px 0px #ffaa38, 0px 2px 0px 0px #ae6e19, 0px 5px 3px #072f5b;
+}
+
+section#CTA a:active::before {
+    top:50%;
+    margin-top:-12px;
+    -webkit-box-shadow: inset 0px 1px 0px #ffbf6b, 0px 3px 0px #73480e, 0px 6px 3px #b47117;
+    -moz-box-shadow: inset 0px 1px 0px #ffbf6b, 0px 3px 0px #73480e, 0px 6px 3px #b47117;
+    -o-box-shadow: inset 0px 1px 0px #ffbf6b, 0px 3px 0px #73480e, 0px 6px 3px #b47117;
+    box-shadow: inset 0px 1px 0px #ffbf6b, 0px 3px 0px #73480e, 0px 6px 3px #b47117;
+}
+
+section#CTA a, section#CTA p {
+    position: absolute;
+}
+
+section#CTA p {
+    top: 45%;
+    right: 30%;
+    font-size: 24px;
+}
+
+/****** INFORMATION STYLE ******/
+
+section#information {
+    min-height: 475px;
+    background: url("../images/pattern.jpg");
+    -webkit-box-shadow: 0px -3px 7px 0px rgba(7, 47, 91, 0.4), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow:    0px -3px 7px 0px rgba(7, 47, 91, 0.4), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    box-shadow:         0px -3px 7px 0px rgba(7, 47, 91, 0.4), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #FFF;
+    border-bottom: 5px solid #FFF;
+}
+
+section#information h3 {
+    color: #1564ae;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+section#information p {
+    color: #444;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+section#information .infosection {
+    width: 640px;
+    padding-left: 160px;
+    margin-top: 30px;
+}
+
+section#information #left {
+    float: left;
+}
+
+section#information #right {
+    float: right;
+}
+
+section#information form {
+    width: 220px;
+}
+
+/****** FORM STYLE ******/
+
+input, textarea {
+    width: 200px;
+    height: 33px;
+    border-radius: 2px;
+    background-color: #eee;
+    border: 1px solid #b7b7b7;
+    padding: 0px 10px;
+    font-family: 'Signika', sans-serif;
+    font-size: 14px;
+}
+
+textarea {
+    height: 120px;
+    padding-top: 10px;
+}
+
+button {
+    background-color: #fe9d1c;
+    border: none;
+    height: 35px;
+    border-radius: 2px;
+    padding: 8px 16px;
+    /*font-family: 'Signika', sans-serif;*/
+    font-size: 16px;
+    font-weight: 300;
+    color: #FFF;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffc40f;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    color: #b7b7b7;
+    font-family: 'Signika', sans-serif !important;
+    font-weight: 300;
+    font-style: italic;
+}
+
+:-moz-placeholder {
+    color: #b7b7b7;
+    font-family: 'Signika', sans-serif !important;
+    font-weight: 300;
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    color: #b7b7b7;
+    font-family: 'Signika', sans-serif !important;
+    font-weight: 300;
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    color: #b7b7b7;
+    font-family: 'Signika', sans-serif !important;
+    font-weight: 300;
+    font-style: italic;
+}

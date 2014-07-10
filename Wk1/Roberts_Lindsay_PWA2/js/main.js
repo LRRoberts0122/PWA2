@@ -42,6 +42,9 @@
 	===============================================
 	======================================== EVENTS	
 	*/
+    $('#registerBtn').bind('click', function() {
+//        alert('User clicked the button!');
+    });
 	
 	
 	/*	

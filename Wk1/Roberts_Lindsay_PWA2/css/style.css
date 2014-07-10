@@ -1,19 +1,8 @@
-/* ==============================
-            COLOR CODES
-   ==============================
-   Header Background: rgb(4,15,24,.6);
-
-*/
-
-
-/* ==============================
-            CSS RESET
-   ==============================
+/****** CSS RESET ******
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -64,12 +53,7 @@ button, input, textarea {
 
 
 
-/* ==============================
-           WEBSITE STYLE
-   ==============================
-   -- COLOR CODES --
-   Header Background: rgba(4,15,24,.6);
-*/
+/****** GLOBAL STYLES ******/
 html {
     height: 100%;
     background: #0f529d; /* Old browsers */
@@ -86,7 +70,8 @@ body {
     font-family: 'Signika', sans-serif;
 }
 
-header a#logo, section#CTA h1 {
+header a#logo,
+section#CTA h1 {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -101,8 +86,19 @@ div.wrapper {
 div.clear {
     clear: both;
 }
-/****** HEADER STYLE ******/
 
+h3 {
+    color: #1564ae;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+
+/****** HEADER STYLE ******/
 header {
     background: rgba(4,15,24,.6);
     height: 80px;
@@ -124,6 +120,8 @@ header form {
     right: 0px;
 }
 
+
+
 /****** CTA STYLE ******/
 section#CTA {
     clear: both;
@@ -144,10 +142,197 @@ section#CTA h1 {
 }
 
 section#CTA p {
+    position: absolute;
+    top: 45%;
+    right: 30%;
+    font-size: 24px;
     color: #c4e4ff;
     font-weight: lighter;
 }
 
+
+
+/****** MODAL STYLES ******/
+div#registerModal {
+    width: 400px;
+    border: 5px solid #FFF;
+    border-radius: 2px;
+    margin: 0 auto;
+    margin-top: 7%;
+    padding: 0px 20px;
+}
+
+div#registerModal button {
+    display: block;
+}
+
+div#registerModal form {
+    position: relative;
+}
+
+div#registerModal img {
+    position: absolute;
+    right: -32.65%;
+}
+
+div#registerModal a.close {
+    float:right;
+    margin-top:-25px;
+    margin-right:-15px;
+    cursor:pointer;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+}
+
+div#registerModal a.close:before {
+    content: "X";
+    color: #1564ae;
+}
+
+
+
+/****** INFORMATION STYLES ******/
+
+section#information, div#registerModal {
+    height: 100%;
+    background: url("../images/pattern.jpg");
+    -webkit-box-shadow: 0px -3px 7px 0px rgba(7, 47, 91, 0.4), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow:    0px -3px 7px 0px rgba(7, 47, 91, 0.4), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    box-shadow:         0px -3px 7px 0px rgba(7, 47, 91, 0.4), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #FFF;
+    border-bottom: 5px solid #FFF;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+section#information #left {
+    float: left;
+}
+
+section#information #right {
+    float: right;
+}
+
+section#information div#branding {
+    background: url("../images/branding.png") left center no-repeat;
+}
+
+section#information div#design {
+    background: url("../images/design.png") left center no-repeat;
+}
+
+section#information div#coding {
+    background: url("../images/coding.png") left center no-repeat;
+}
+
+section#information div.infosection {
+    width: 510px;
+    padding-left: 160px;
+    padding-right: 70px;
+}
+
+section#information form {
+    width: 220px;
+}
+
+section#information p, div#registerModal p {
+    color: #444;
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 24px;
+}
+
+
+
+
+/****** FORM STYLES ******/
+input,
+textarea {
+    width: 200px;
+    height: 33px;
+    border-radius: 2px;
+    background-color: #eee;
+    border: 1px solid #b7b7b7;
+    padding: 0px 10px;
+    font-family: 'Signika', sans-serif;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #fe9d1c;
+}
+
+textarea {
+    height: 120px;
+    padding-top: 10px;
+}
+
+section#information input,
+section#information textarea,
+section#information button,
+div#registerModal input,
+div#registerModal button {
+    margin-top: 10px;
+}
+
+section#information form p,
+div#registerModal p {
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #fe9d1c;
+    border: none;
+    height: 35px;
+    border-radius: 2px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #FFF;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffc40f;
+    cursor: pointer;
+}
+
+
+
+/****** PLACEHOLDER STYLES ******/
+::-webkit-input-placeholder {
+    color: #b7b7b7;
+    font-family: 'Signika', sans-serif !important;
+    font-weight: 300;
+    font-style: italic;
+}
+
+:-moz-placeholder {
+    color: #b7b7b7;
+    font-family: 'Signika', sans-serif !important;
+    font-weight: 300;
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    color: #b7b7b7;
+    font-family: 'Signika', sans-serif !important;
+    font-weight: 300;
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    color: #b7b7b7;
+    font-family: 'Signika', sans-serif !important;
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+
+/****** CTA BUTTON STYLE *****/
 section#CTA a {
     position: absolute;
     top: 55%;
@@ -234,141 +419,4 @@ section#CTA a:active::before {
     -moz-box-shadow: inset 0px 1px 0px #ffbf6b, 0px 3px 0px #73480e, 0px 6px 3px #b47117;
     -o-box-shadow: inset 0px 1px 0px #ffbf6b, 0px 3px 0px #73480e, 0px 6px 3px #b47117;
     box-shadow: inset 0px 1px 0px #ffbf6b, 0px 3px 0px #73480e, 0px 6px 3px #b47117;
-}
-
-section#CTA a, section#CTA p {
-    position: absolute;
-}
-
-section#CTA p {
-    top: 45%;
-    right: 30%;
-    font-size: 24px;
-}
-
-/****** INFORMATION STYLE ******/
-
-section#information {
-    height: 100%;
-    background: url("../images/pattern.jpg");
-    -webkit-box-shadow: 0px -3px 7px 0px rgba(7, 47, 91, 0.4), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
-    -moz-box-shadow:    0px -3px 7px 0px rgba(7, 47, 91, 0.4), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
-    box-shadow:         0px -3px 7px 0px rgba(7, 47, 91, 0.4), inset 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
-    border-top: 5px solid #FFF;
-    border-bottom: 5px solid #FFF;
-    padding-bottom: 30px;
-    margin-bottom: 10px;
-}
-
-#branding {
-    background: url("../images/branding.png") left center no-repeat;
-}
-
-#design {
-    background: url("../images/design.png") left center no-repeat;
-}
-
-#coding {
-    background: url("../images/coding.png") left center no-repeat;
-}
-
-section#information h3 {
-    color: #1564ae;
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-section#information p {
-    color: #444;
-    font-size: 18px;
-    font-weight: lighter;
-    line-height: 24px;
-}
-
-section#information .infosection {
-    width: 510px;
-    padding-left: 160px;
-    padding-right: 70px;
-}
-
-section#information #left {
-    float: left;
-}
-
-section#information #right {
-    float: right;
-}
-
-section#information form {
-    width: 220px;
-}
-
-/****** FORM STYLE ******/
-
-input, textarea {
-    width: 200px;
-    height: 33px;
-    border-radius: 2px;
-    background-color: #eee;
-    border: 1px solid #b7b7b7;
-    padding: 0px 10px;
-    font-family: 'Signika', sans-serif;
-    font-size: 14px;
-}
-
-textarea {
-    height: 120px;
-    padding-top: 10px;
-}
-
-button {
-    background-color: #fe9d1c;
-    border: none;
-    height: 35px;
-    border-radius: 2px;
-    padding: 8px 16px;
-    /*font-family: 'Signika', sans-serif;*/
-    font-size: 16px;
-    font-weight: 300;
-    color: #FFF;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ffc40f;
-    cursor: pointer;
-}
-
-::-webkit-input-placeholder {
-    color: #b7b7b7;
-    font-family: 'Signika', sans-serif !important;
-    font-weight: 300;
-    font-style: italic;
-}
-
-:-moz-placeholder {
-    color: #b7b7b7;
-    font-family: 'Signika', sans-serif !important;
-    font-weight: 300;
-    font-style: italic;
-}
-
-::-moz-placeholder {
-    color: #b7b7b7;
-    font-family: 'Signika', sans-serif !important;
-    font-weight: 300;
-    font-style: italic;
-}
-
-:-ms-input-placeholder {
-    color: #b7b7b7;
-    font-family: 'Signika', sans-serif !important;
-    font-weight: 300;
-    font-style: italic;
-}
-
-section#information input, section#information textarea, section#information button {
-    margin-top: 10px;
 }

@@ -57,6 +57,18 @@ button, input, textarea {
 html {
     height: 100%;
     background: #0f529d; /* Old browsers */
+    background: -moz-linear-gradient(top,  #0f529d 0%, #1055a0 45%, #2376b9 89%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f529d), color-stop(45%,#1055a0), color-stop(89%,#2376b9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #0f529d 0%,#1055a0 45%,#2376b9 89%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #0f529d 0%,#1055a0 45%,#2376b9 89%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #0f529d 0%,#1055a0 45%,#2376b9 89%); /* IE10+ */
+    background: linear-gradient(to bottom,  #0f529d 0%,#1055a0 45%,#2376b9 89%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f529d', endColorstr='#2376b9',GradientType=0 ); /* IE6-9 */
+}
+
+html#index {
+    height: 100%;
+    background: #0f529d; /* Old browsers */
     background:url("../images/light.png") top center no-repeat, -moz-linear-gradient(top,  #0f529d 0%, #1055a0 45%, #2376b9 89%); /* FF3.6+ */
     background:url("../images/light.png") top center no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f529d), color-stop(45%,#1055a0), color-stop(89%,#2376b9)); /* Chrome,Safari4+ */
     background:url("../images/light.png") top center no-repeat, -webkit-linear-gradient(top,  #0f529d 0%,#1055a0 45%,#2376b9 89%); /* Chrome10+,Safari5.1+ */
@@ -87,6 +99,12 @@ div.clear {
     clear: both;
 }
 
+h2 {
+    color: #61aadf;
+    font-size: 36px;
+    font-weight: bold;
+}
+
 h3 {
     color: #1564ae;
     font-size: 24px;
@@ -113,13 +131,48 @@ header a#logo {
     float: left;
 }
 
-header form {
+header form, div#toolbar {
     float: right;
     position: absolute;
     top: 25px;
     right: 0px;
 }
 
+#toolbar p, #toolbar button {
+    display: inline;
+}
+
+#toolbar p {
+    display: inline-block;
+    color: #FFF;
+    font-weight: 300;
+    font-style: italic;
+    background: #4587c7;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    height: 19px;
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#toolbar button {
+    background-color: #3776b2;
+    border-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin: 0;
+    line-height: 20px;
+    border-left: 1px solid #092b4f;
+}
+
+#toolbar button:hover {
+    background-color: #4587c7;
+}
+
+#toolbar p span {
+    font-weight: 500;
+}
 
 
 /****** CTA STYLE ******/
@@ -153,13 +206,32 @@ section#CTA p {
 
 
 /****** MODAL STYLES ******/
+div#overlay {
+    background: black;
+    opacity: .6;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:100;
+    display: none;
+}
+
 div#registerModal {
     width: 400px;
+    height: 420px !important;
     border: 5px solid #FFF;
     border-radius: 2px;
     margin: 0 auto;
     margin-top: 7%;
     padding: 0px 20px;
+    position: fixed;
+    top: -575px;
+    right: 30%;
+    left: 30%;
+    z-index: 101;
+    display: none;
 }
 
 div#registerModal button {
@@ -172,7 +244,8 @@ div#registerModal form {
 
 div#registerModal img {
     position: absolute;
-    right: -32.65%;
+    right: -30.65%;
+    bottom: -10%;
 }
 
 div#registerModal a.close {
@@ -191,6 +264,9 @@ div#registerModal a.close:before {
     color: #1564ae;
 }
 
+div#registerModal a.close:hover:before {
+    color: #61aadf;
+}
 
 
 /****** INFORMATION STYLES ******/
@@ -244,7 +320,65 @@ section#information p, div#registerModal p {
     line-height: 24px;
 }
 
+/****** DASHBOARD STYLES ******/
+div#dashboard {
+    background: url("../images/pattern.jpg");
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+}
 
+div#menubar {
+    background: rgba(255, 255, 255, .4);
+    border-bottom: 1px solid #b3b3b3;
+}
+
+div#menubar h2 {
+    display: inline-block;
+    height: 40px;
+    padding: 20px 30px;
+    border-right: 1px solid #b3b3b3;
+}
+
+div#menubar ul {
+    float: right;
+}
+
+div#menubar ul li {
+    display: inline-block;
+    height: 40px;
+    padding: 20px 25px;
+    line-height: 37px;
+    cursor: pointer;
+    font-weight: lighter;
+    -o-transition:.3s;
+    -ms-transition:.3s;
+    -moz-transition:.3s;
+    -webkit-transition:.3s;
+    transition:.3s;
+}
+div#menubar ul li:hover {
+    background: #4587c7;
+    color: #fff;
+}
+
+div#menubar ul li.active {
+    background: #1564ae;
+    color: #fff;
+    font-weight: 500;
+}
+
+div#dashboardContentArea {
+    padding-top: 55px;
+}
+div#dashboardContentArea p {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+}
 
 
 /****** FORM STYLES ******/

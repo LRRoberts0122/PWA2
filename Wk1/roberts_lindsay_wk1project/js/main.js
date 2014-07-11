@@ -42,20 +42,17 @@
 	===============================================
 	======================================== EVENTS	
 	*/
-    $(function() {
-        $("#registerBtn").click(function(){
-            $("#overlay").fadeIn({queue: false, duration: 500});
-            $("#registerModal").fadeIn({queue: false, duration: 500});
-            $("#registerModal").animate({'top': '20px'}, 500);
-            return false;
-        });
+    $("#registerBtn").click(function(){
+        $("#overlay").fadeIn({queue: false, duration: 500});
+        $("#registerModal").fadeIn({queue: false, duration: 500});
+        $("#registerModal").animate({'top': '20px'}, 500);
+        return false;
+    });
 
-        $(".close").click(function(){
-            $("#overlay").fadeOut({queue: false, duration: 500});
-            $('#registerModal').fadeOut({queue: false, duration: 350});
-            $("#registerModal").animate({'top': '-575px'}, 500);
-        });
-
+    $(".close").click(function(){
+        $("#overlay").fadeOut({queue: false, duration: 500});
+        $('#registerModal').fadeOut({queue: false, duration: 350});
+        $("#registerModal").animate({'top': '-575px'}, 500);
     });
 	
 	

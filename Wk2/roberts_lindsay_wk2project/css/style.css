@@ -1,3 +1,4 @@
+@import url("dropdown.css");
 /****** CSS RESET ******
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -114,7 +115,19 @@ h3 {
     margin-bottom: 15px;
 }
 
+b {
+    font-weight: 500;
+}
 
+a {
+    color: #fe9d1c;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 /****** HEADER STYLE ******/
 header {
@@ -138,32 +151,40 @@ header form, div#toolbar {
     right: 0px;
 }
 
+#toolbar {
+    height: 35px;
+}
+
 #toolbar p, #toolbar button {
     display: inline;
 }
 
-#toolbar p {
+#toolbar p, #toolbar button {
     display: inline-block;
+    height: 35px;
+}
+
+#toolbar p {
+    float: left !important;
     color: #FFF;
     font-weight: 300;
-    font-style: italic;
+    font-size: 13px !important;
     background: #4587c7;
-    border-top-left-radius: 2px;
+    text-align: center;
+    line-height: 36px;
+    padding: 0px 16px;
     border-bottom-left-radius: 2px;
-    height: 19px;
-    padding: 8px 16px;
-    font-size: 12px;
-    line-height: 20px;
+    border-top-left-radius: 2px;
+    border-right: 1px solid #092b4f;
 }
 
 #toolbar button {
-    background-color: #3776b2;
+    float: right;
+    background: #3776b2;
     border-radius: 0;
-    border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
     margin: 0;
-    line-height: 18px;
-    border-left: 1px solid #092b4f;
 }
 
 #toolbar button:hover {
@@ -172,6 +193,7 @@ header form, div#toolbar {
 
 #toolbar p span {
     font-weight: 500;
+    font-style: italic;
 }
 
 
@@ -324,16 +346,105 @@ section#information p, div#registerModal p {
 /****** DASHBOARD STYLES ******/
 div#dashboard {
     background: url("../images/pattern.jpg");
+    position: absolute;
     width: 100%;
-    height: 100%;
-    position: fixed;
     top: 80px;
-    bottom: 0;
+    bottom: 0px;
+}
+
+div.dbHeader, div.dashboardItem {
+    width: 898px;
+    height: auto;
+}
+
+div.dashboardItem {
+    border-radius: 2px;
+    border: 1px solid #dedede;
+    background-color: #eeeeee;
+    padding: 30px;
+    margin-bottom: 16px;
+}
+
+div.dbHeader h3, div.dbHeader p {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    float: left;
+}
+
+div.dbHeader div.dbLinks {
+    float: right;
+}
+
+div#dashboard div.dashboardItem div.dbHeader p {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-style: italic;
+    line-height: 22px;
+}
+
+div#dashboard div.dashboardItem div.dbHeader div.dbLinks p {
+    font-style: normal !important;
+}
+
+div.dbDescription {
+    clear: both;
+}
+
+div.dbLeft, div.dbRight {
+    width: 449px;
+}
+
+div.dbLeft {
+    float: left;
+}
+
+div.dbRight {
+    float: right;
+}
+
+.dbSection {
+    margin-bottom: 16px !important;
+}
+
+div#dashboard div.dashboardItem p {
+    font-style: normal;
+    text-align: left;
+    line-height: 22px;
+}
+
+div.dashboardItem h3 {
+    margin: 0px 15px 15px 0;
+}
+
+.balance {
+    font-weight: 500;
+    color: #1564ae;
+    margin-left: 5px;
+}
+
+.depositReceived {
+    color: #11b945;
+}
+
+.depositDue {
+    color: #b92511;
+}
+
+.dbDescription a, .dbInfo .dbLeft .dbSection a, .dbInfo .dbRight a  {
+    margin-left: 10px;
 }
 
 div#menubar {
-    background: rgba(255, 255, 255, .4);
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.45),
+            rgba(255, 255, 255, 0.45)
+    ), url("../images/pattern.jpg");
     border-bottom: 1px solid #b3b3b3;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 105;
 }
 
 div#menubar h2 {
@@ -382,8 +493,14 @@ div#menubar ul li.active a {
 }
 
 div#dashboardContentArea {
-    padding-top: 55px;
+    padding: 16px 0;
+    position: absolute;
+    width: 100%;
+    overflow: scroll;
+    top: 60px;
+    bottom: 0px;
 }
+
 div#dashboardContentArea p {
     margin: 0 auto;
     text-align: center;
@@ -412,6 +529,23 @@ input:focus, textarea:focus {
 textarea {
     height: 120px;
     padding-top: 10px;
+}
+
+select {
+    border-radius: 2px;
+    border: 1px solid #b7b7b7;
+    background-color: #eeeeee;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    font-family: 'Signika', sans-serif;
+    font-weight: 300;
+    width: 222px;
+    padding: 7px 10px 0px 10px;
+}
+
+.ddPlaceholder {
+    color: #b7b7b7;
 }
 
 section#information input,
@@ -593,4 +727,11 @@ section#CTA a:active::before {
     border-right-color: #4286ca;
     border-width: 6px;
     margin-top: -6px;
+}
+
+
+/* FONT */
+@font-face {
+    font-family: "OCRA";
+    src: url("../fonts/ocraextended.ttf") format("truetype");
 }

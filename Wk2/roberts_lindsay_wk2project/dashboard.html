@@ -34,7 +34,7 @@
                 <h2>Project Dashboard</h2>
                 <ul>
                     <li>
-                        <a href="#">New Project</a>
+                        <a href="#new">New Project</a>
                     </li><li>
                         <a href="#projects">View Projects</a>
                     </li><li>
@@ -48,12 +48,129 @@
 
         <!-- CONTENT AREA -->
         <div id="dashboardContentArea">
+            <div id="new" class="wrapper">
+
+                    <form id="createProject">
+                        <h3>Create a Project</h3>
+                        <label>Project Name:</label><br/>
+                        <input type="text" placeholder="Project name..." />
+                        <br />
+                        <br />
+
+                        <label>Product Type:</label><br/>
+                        <input type="hidden" id="product" />
+
+                        <div class="ddWrapper">
+                            <div id="dd" class="wrapper-dropdown" tabindex="1">
+                                <span>Select your product...</span>
+                                <ul class="dropdown">
+                                    <li><a href="#"><i class="icon-star icon-large"></i>Logo Design</a></li>
+                                    <li><a href="#"><i class="icon-pencil icon-large"></i>Logo Retouch</a></li>
+                                    <li><a href="#"><i class="icon-user icon-large"></i>Business Card Design</a></li>
+                                    <li><a href="#"><i class="icon-print icon-large"></i>Print Design</a></li>
+                                    <li><a href="#"><i class="icon-sitemap icon-large"></i>Web Design</a></li>
+                                    <li><a href="#"><i class="icon-briefcase icon-large"></i>Branding Package</a></li>
+                                    <li><a href="#"><i class="icon-magic icon-large"></i>Website Redesign Package</a></li>
+                                    <li><a href="#"><i class="icon-thumbs-up icon-large"></i>Social Media Package</a></li>
+                                </ul>
+                            </div>
+                        ​</div>
+
+                        <br/>
+                        <br/>
+                        <p style="text-align: left">Your project is:<br/>
+                            <span style="font-weight: bold">Creative Zeus Branding Package</span></p>
+                        <br />
+                        <br />
+                        <textarea placeholder="Enter a brief, yet thorough description of your project..."></textarea>
+                        <br />
+                        <br />
+                        <input type="date" placeholder="Your deadline..." />
+                        <br />
+                        <br />
+                        <input type="text" placeholder="Budget... $0 - $100" />
+                    </form>
+                </div>
+
+
+
             <div id="projects" class="wrapper">
-                <p>There are no projects to display. Create one!</p>
-            </div>
+
+
+                <div class="dashboardItem">
+                    <div class="dbHeader">
+                        <!-- <h3>[[INSERT TITLE]]</h3> <p>created [[INSERT DATE]] by [[INSERT NAME]]</p> -->
+                        <h3>Dana Robins Logo Design</h3><p>created July 7, 2014 by Dana</p>
+                        <div class="dbLinks">
+                            <p><a href="#">View Project</a> | <a href="#">Cancel Project</a></p>
+                        </div>
+                    </div>
+
+                    <div class="dbDescription dbSection">
+                        <p><b>Description</b></p>
+                        <p>I would like a logo to be designed for my art portfolio.  I have attached some images for further inspiration for my logo design. I would like the logo to be my name, Dana Robins, and have a paint-like texture to it. I prefer a darker color theme, as my artwork is a bit on the dark side of abstract. <a href="#">Edit</a></a></p>
+                    </div>
+
+                    <div class="dbInfo dbSection">
+                        <div class="dbLeft">
+                            <p class="dbSection"><b>Deadline:</b> August 01, 2014 <a href="#">Change Deadline</a></p>
+                            <p><b>Recent Activity</b></p>
+                            <p>Lindsay uploaded <a href="#">First Draft</a></p>
+                        </div>
+
+                        <div class="dbRight">
+                            <p class="dbSection"><b>Balance:</b> <span class="balance">$475</span> <a href="#">View Invoice</a></p>
+                            <p><b>Payments:</b></p>
+                            <p>Received Deposit of <span class="depositReceived">$75</span> on July 07, 2014 <a href="#">View Receipt</a></p>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+
+
+
+
+                <div class="dashboardItem">
+                    <div class="dbHeader">
+                        <!-- <h3>[[INSERT TITLE]]</h3> <p>created [[INSERT DATE]] by [[INSERT NAME]]</p> -->
+                        <h3>Dana Robins Web Design</h3><p>created July 11, 2014 by Dana</p>
+                        <div class="dbLinks">
+                            <p><a href="#">View Project</a> | <a href="#">Cancel Project</a></p>
+                        </div>
+                    </div>
+
+                    <div class="dbDescription dbSection">
+                        <p><b>Description</b></p>
+                        <p>I would like a website for my portfolio. I need a home page that features the newest exhibits, a gallery showcasing all of my work, a page for upcoming exhibits, an about page, and finally a contact page. I would like for the styling of the website to be the same as described in the Logo Design project.  <a href="#">Edit</a></a></p>
+                    </div>
+
+                    <div class="dbInfo dbSection">
+                        <div class="dbLeft">
+                            <p class="dbSection"><b>Deadline:</b> October 28, 2014 <a href="#">Change Deadline</a></p>
+                            <p><b>Recent Activity</b></p>
+                            <p>There is no recent activity.</p>
+                        </div>
+
+                        <div class="dbRight">
+                            <p class="dbSection"><b>Balance:</b> <span class="balance">$2,750</span> <a href="#">View Invoice</a></p>
+                            <p><b>Payments:</b></p>
+                            <p><span class="depositDue">$399</span> Deposit due on July 22, 2014 <a href="#">Make Payment</a></p>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+
+
+                <p>There are no other projects.</p>
+
+            </div> <!-- End Projects -->
+
             <div id="payments" class="wrapper">
                 <p>There are no payments due at this time.</p>
             </div>
+
             <div id="activity" class="wrapper">
                 <p>There is nothing to display.</p>
             </div>

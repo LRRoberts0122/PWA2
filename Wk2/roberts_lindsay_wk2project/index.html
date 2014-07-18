@@ -24,7 +24,7 @@
 	
 	<!-- CSS concatenated and minified via ant build script-->
     <link href='http://fonts.googleapis.com/css?family=Signika:400,300,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="css/compressed.css">
 	<!-- end CSS-->
 	
 </head>
@@ -34,9 +34,11 @@
     <header>
         <div class="wrapper">
             <a id="logo" href="#">Logo</a>
-            <form>
-                <input type="text" id="username" name="username" placeholder="Your username." />
-                <input type="password" id="password" name="password" placeholder="Your password." />
+            <form id="loginForm">
+                <i class="icon-user"></i>
+                <input type="text" id="username" name="username" placeholder="Your username." class="loginTooltip" title="Your cool username." />
+                <i class="icon-key"></i>
+                <input type="password" id="password" name="password" placeholder="Your password." class="loginTooltip" title="Your top-secret password." />
                 <button id="login" onclick="location.href='dashboard.html'">Sign in</button>
             </form>
         </div>

@@ -96,7 +96,7 @@ div.wrapper {
     margin: 0 auto;
 }
 
-div.clear {
+.clear {
     clear: both;
 }
 
@@ -153,19 +153,21 @@ header form, div#toolbar {
 
 #toolbar {
     height: 35px;
+    width: 450px;
 }
 
 #toolbar p, #toolbar button {
     display: inline;
+    float: right;
 }
 
 #toolbar p, #toolbar button {
     display: inline-block;
     height: 35px;
+    float: right;
 }
 
 #toolbar p {
-    float: left !important;
     color: #FFF;
     font-weight: 300;
     font-size: 13px !important;
@@ -257,7 +259,7 @@ div#registerModal {
 }
 
 div#newProjectModal {
-    width: 235px;
+    width: 550px;
     height: auto;
     border: 5px solid #FFF;
     border-radius: 2px;
@@ -272,7 +274,77 @@ div#newProjectModal {
     display: none;
 }
 
-div#registerModal button {
+div#newProjectModal form, div#projectPreview {
+    float: left;
+}
+
+#projectTitle {
+    font-size: 14px;
+}
+#projectPreview {
+    margin-top: 65px;
+    width: 285px;
+    padding-left: 15px;
+}
+
+#previewWindow {
+    padding: 15px;
+    background: #eee;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+}
+
+#previewWindow b, #previewWindow p {
+    font-size: 11px;
+}
+
+#previewWindow p {
+    font-weight: 300;
+}
+
+#projectPreview p {
+    margin-bottom: 15px;
+}
+
+div#descriptionPreview {
+    max-height: 225px;
+    overflow: hidden;
+    position: relative;
+    font-size: 11px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+#urgency {
+    font-style: italic;
+}
+
+#statusPreview {
+    font-weight: 500;
+}
+
+div#descriptionFade {
+    position: absolute;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, #eee));
+    background-image: -webkit-linear-gradient(top, transparent, #eee);
+    background-image: -moz-linear-gradient(top, transparent, #eee);
+    background-image: -ms-linear-gradient(top, transparent, #eee);
+    background-image: -o-linear-gradient(top, transparent, #eee);
+}
+
+.createdBy {
+    color: #b3b3b3;
+    font-style: italic;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+div#registerModal button, div#newProjectModal button {
     display: block;
 }
 
@@ -295,6 +367,10 @@ a.close {
     display: inline-block;
     line-height: 0px;
     padding: 11px 3px;
+}
+
+#newProjectModal a.close {
+    margin-top: 0px !important;
 }
 
 a.close:before {
@@ -466,7 +542,7 @@ div#menubar {
     border-bottom: 1px solid #b3b3b3;
     position: fixed;
     width: 100%;
-    height: auto;
+    height: 58px;
     z-index: 105;
 }
 
@@ -483,11 +559,11 @@ div#menubar a#newProject {
     line-height: 60px;
     padding: 0 25px;
     font-size: 14px;
-    -o-transition:.3s;
-    -ms-transition:.3s;
-    -moz-transition:.3s;
-    -webkit-transition:.3s;
-    transition:.3s;
+    -o-transition: background-color .3s ease, color .3s ease;
+    -ms-transition: background-color .3s, color .3s ease;
+    -moz-transition: background-color .3s, color .3s ease;
+    -webkit-transition: background-color .3s, color .3s ease;
+    transition: background-color .3s, color .3s ease;
 }
 
 div#menubar a#newProject:hover {
@@ -504,16 +580,16 @@ div#menubar ul {
 div#menubar ul li {
     display: inline-block;
     height: 38px;
-    padding: 10px 25px;
+    padding: 10px 15px;
     line-height: 37px;
     font-size: 14px;
     cursor: pointer;
     font-weight: lighter;
-    -o-transition:.3s;
-    -ms-transition:.3s;
-    -moz-transition:.3s;
-    -webkit-transition:.3s;
-    transition:.3s;
+    -o-transition: background-color .3s, color .3s ease;
+    -ms-transition: background-color .3s, color .3s ease;
+    -moz-transition: background-color .3s, color .3s ease;
+    -webkit-transition: background-color .3s, color .3s ease;
+    transition: background-color .3s, color .3s ease;
 }
 div#menubar ul li:hover {
     background: #4587c7;
@@ -574,6 +650,8 @@ input:focus, textarea:focus {
 textarea {
     height: 120px;
     padding-top: 10px;
+    margin-bottom: 2px;
+    resize: none;
 }
 
 section#information input,
@@ -595,6 +673,73 @@ div#registerModal button,
 section#information form p,
 div#registerModal p {
     margin-bottom: 15px;
+}
+
+.statusGroup label {
+    position: relative;
+    float: left;
+    display: inline-block;
+    margin-right: 25px;
+    margin-top: 5px;
+    padding-left: 0px;
+    margin-bottom: 12px;
+    line-height: 22px;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+}
+
+.statusGroup label:before {
+    background: #eee;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 2px;
+    left: 0;
+    width: 15px;
+    height: 16px;
+    border: 1px solid #bbb;
+    border-radius: 30px;
+}
+
+input[type="radio"]:checked + label:before {
+    content: "\2022";
+    text-align: center;
+    line-height: 18px;
+    font-size: 36px;
+    color: #3776b2;
+    font-family: "Helvetica",sans-serif;
+}
+
+.radioText {
+    font-size: 16px !important;
+    font-weight: 300;
+    color: #444;
+    margin-left: 20px;
+    line-height: 20px;
+}
+
+input[type="radio"] {
+    display: none !important;
+}
+
+
+.statusGroup label i {
+    margin-left: 3px;
+    font-size: 16px;
+}
+
+.statusGroup .icon-ok {
+    color: #11b945;
+}
+
+.statusGroup .icon-flag {
+    color: #b92511;
+}
+
+.statusGroup p {
+    margin-top: 16px;
+    font-size: 14px;
 }
 
 button {
@@ -645,6 +790,15 @@ button:hover {
     font-style: italic;
 }
 
+::selection {
+    background: #61aadf !important;
+    color: #fff !important;
+}
+
+::-moz-selection {
+    background: #61aadf !important;
+    color: #fff !important;
+}
 
 
 /****** CTA BUTTON STYLE *****/
@@ -737,7 +891,7 @@ section#CTA a:active::before {
 }
 
 
-.tooltip {
+.tooltip, .userpassTooltip {
     position: absolute;
     max-width: 165px;
     color: #FFFFFF !important;
@@ -765,6 +919,18 @@ section#CTA a:active::before {
     margin-top: -6px;
 }
 
+.userpassTooltip:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -6px;
+    width: 0; height: 0;
+    border-bottom: 6px solid #4286ca;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
 
 /* FONT */
 @font-face {
@@ -781,6 +947,35 @@ section#CTA a:active::before {
 
 #projectTitlePreview {
     font-size: 16px;
-    margin: 6px 0 15px 0;
+    margin: 6px 0;
+}
 
+#menubar .wrapper {
+    position: relative;
+}
+
+#nav {
+    height: 58px;
+    position: absolute;
+    width: 75%;
+    top: 0;
+    right: 0;
+}
+
+#loginForm {
+    position: relative;
+}
+
+#loginForm .icon-user {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    color: #b7b7b7;
+}
+
+#loginForm .icon-key {
+    position: absolute;
+    top: 10px;
+    left: 425px;
+    color: #b7b7b7;
 }

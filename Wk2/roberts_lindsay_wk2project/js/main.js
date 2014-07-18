@@ -4,8 +4,8 @@
 */
 
 (function($){
-	
-	
+
+
 	/*
 	===============================================
 	========================= APPLICATION FUNCTIONS	
@@ -67,6 +67,8 @@
         if($("#newProjectModal")){
             $('#newProjectModal').fadeOut({queue: false, duration: 350});
             $("#newProjectModal").animate({'top': '-575px'}, 500);
+
+            populateModal();
         }
     });
 
@@ -104,7 +106,8 @@
 
         $(".tooltip").css({
             top: $(this).height() / 2 - $(".tooltip").height() / 2 + $(this).position().top,
-            left: $(this).width() + 30
+            left: $(this).width() + 30,
+            zIndex: 115
         });
     }, function() {
         // Hover out code
@@ -113,6 +116,28 @@
     });
 
 
+    $(".loginTooltip").focus(function(){
+        //Hover over code
+        var title = $(this).attr("title");
+        $(this).data("tipText", title).removeAttr("title");
+
+        $("<p class=\"userpassTooltip\"></p>")
+            .text(title)
+            .insertAfter($(this))
+            .fadeIn("slow");
+
+        $(".userpassTooltip").css({
+            top: $(".loginTooltip").height() + 15,
+            left: ($(".loginTooltip").width() - $(".userpassTooltip").width()) / 2 + $(this).position().left
+        });
+    });
+
+    $(document).ready(function() {
+        $(".loginTooltip").focusout(function() {
+            $(this).attr("title", $(this).data("tipText"));
+            $(".userpassTooltip").remove();
+        });
+    });
     /*
     ===============================================
     ====================================== DROPDOWN
@@ -178,12 +203,60 @@
     =============================== PROJECT PREVIEW
     */
     $("#projectName").on("input", function(){
-        console.log($("#projectName").val());
         $("#projectNamePreview").html($("#projectName").val());
     });
 
 
+    $("#description").on("input", function(){
+        var text = $("#description").val();
+        text = text.replace(/\r?\n/g, '<br />');
+        $("#descriptionContent").html(text);
+    });
 
+    $("#deadline").on("input", function(){
+        $("#deadlinePreview").html($("#deadline").val());
+    });
+
+    $("#budget").on("input", function(){
+        $("#budgetPreview").html($("#budget").val());
+    });
+
+    $("#statusPreview").html($("input:radio[name=status]:checked").val());
+    setUrgencyColor();
+
+    $("input:radio[name=status]").click(function () {
+        $("#statusPreview").html($("input:radio[name=status]:checked").val());
+        setUrgencyColor();
+    });
+
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var date = new Date();
+    $("#datePreview").html(months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear());
+
+
+    function populateModal() {
+        $("#projectNamePreview").html($("#projectName").val());
+        var description = $("#description").val();
+        description = description.replace(/\r?\n/g, '<br />');
+        $("#descriptionContent").html(description);
+        $("#deadlinePreview").html($("#deadline").val());
+        $("#budgetPreview").html($("#budget").val());
+        $("#datePreview").html(months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear());
+        $("#statusPreview").html($("input:radio[name=status]:checked").val());
+        setUrgencyColor();
+    }
+
+    function setUrgencyColor() {
+        if($("input:radio[name=status]:checked").val() == "Normal") {
+            $("#urgency").css({
+                color: "#11b945"
+            });
+        }else{
+            $("#urgency").css({
+                color: "#b92511"
+            });
+        }
+    }
 
 })(jQuery); // end private scope
 

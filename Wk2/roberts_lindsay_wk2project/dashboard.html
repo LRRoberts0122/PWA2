@@ -26,16 +26,16 @@
             </div>
         </div>
     </header>
+
     <!-- DASHBOARD -->
     <div id="dashboard">
+
         <!-- DASHBOARD MENU -->
         <div id="menubar">
             <div class="wrapper">
                 <h2>Project Dashboard</h2>
                 <ul>
                     <li>
-                        <a href="#new">New Project</a>
-                    </li><li>
                         <a href="#projects">View Projects</a>
                     </li><li>
                         <a href="#payments">Make Payment</a>
@@ -43,60 +43,17 @@
                         <a href="#activity">Recent Activity</a>
                     </li>
                 </ul>
+                <a href="#" id="newProject">New Project <i class="icon-plus icon-resize-small"></i></a>
             </div>
         </div>
 
         <!-- CONTENT AREA -->
         <div id="dashboardContentArea">
-            <div id="new" class="wrapper">
 
-                    <form id="createProject">
-                        <h3>Create a Project</h3>
-                        <label>Project Name:</label><br/>
-                        <input type="text" placeholder="Project name..." />
-                        <br />
-                        <br />
-
-                        <label>Product Type:</label><br/>
-                        <input type="hidden" id="product" />
-
-                        <div class="ddWrapper">
-                            <div id="dd" class="wrapper-dropdown" tabindex="1">
-                                <span>Select your product...</span>
-                                <ul class="dropdown">
-                                    <li><a href="#"><i class="icon-star icon-large"></i>Logo Design</a></li>
-                                    <li><a href="#"><i class="icon-pencil icon-large"></i>Logo Retouch</a></li>
-                                    <li><a href="#"><i class="icon-user icon-large"></i>Business Card Design</a></li>
-                                    <li><a href="#"><i class="icon-print icon-large"></i>Print Design</a></li>
-                                    <li><a href="#"><i class="icon-sitemap icon-large"></i>Web Design</a></li>
-                                    <li><a href="#"><i class="icon-briefcase icon-large"></i>Branding Package</a></li>
-                                    <li><a href="#"><i class="icon-magic icon-large"></i>Website Redesign Package</a></li>
-                                    <li><a href="#"><i class="icon-thumbs-up icon-large"></i>Social Media Package</a></li>
-                                </ul>
-                            </div>
-                        ​</div>
-
-                        <br/>
-                        <br/>
-                        <p style="text-align: left">Your project is:<br/>
-                            <span style="font-weight: bold">Creative Zeus Branding Package</span></p>
-                        <br />
-                        <br />
-                        <textarea placeholder="Enter a brief, yet thorough description of your project..."></textarea>
-                        <br />
-                        <br />
-                        <input type="date" placeholder="Your deadline..." />
-                        <br />
-                        <br />
-                        <input type="text" placeholder="Budget... $0 - $100" />
-                    </form>
-                </div>
-
-
-
+            <!-- PROJECTS -->
             <div id="projects" class="wrapper">
 
-
+                <!-- FIRST PROJECT -->
                 <div class="dashboardItem">
                     <div class="dbHeader">
                         <!-- <h3>[[INSERT TITLE]]</h3> <p>created [[INSERT DATE]] by [[INSERT NAME]]</p> -->
@@ -124,13 +81,10 @@
                             <p>Received Deposit of <span class="depositReceived">$75</span> on July 07, 2014 <a href="#">View Receipt</a></p>
                         </div>
                     </div>
-
                     <div class="clear"></div>
                 </div>
 
-
-
-
+                <!-- SECOND PROJECT -->
                 <div class="dashboardItem">
                     <div class="dbHeader">
                         <!-- <h3>[[INSERT TITLE]]</h3> <p>created [[INSERT DATE]] by [[INSERT NAME]]</p> -->
@@ -158,13 +112,10 @@
                             <p><span class="depositDue">$399</span> Deposit due on July 22, 2014 <a href="#">Make Payment</a></p>
                         </div>
                     </div>
-
                     <div class="clear"></div>
                 </div>
 
-
                 <p>There are no other projects.</p>
-
             </div> <!-- End Projects -->
 
             <div id="payments" class="wrapper">
@@ -175,6 +126,39 @@
                 <p>There is nothing to display.</p>
             </div>
         </div>
+    </div>
+
+    <!-- NEW PROJECT MODAL -->
+    <div id="overlay"></div>
+
+    <div id="newProjectModal">
+        <form id="createProject">
+            <a class="close"></a>
+            <h3>Create a New Project</h3>
+            <input type="text" placeholder="Project name..." id="projectName" />
+            <input type="hidden" id="productName" value="" />
+            <div class="ddWrapper">
+                <div id="dd" class="wrapper-dropdown" tabindex="1">
+                    <span>Select your product...</span>
+                    <ul class="dropdown">
+                        <li><a href="#"><i class="icon-star icon-large"></i>Logo Design</a></li>
+                        <li><a href="#"><i class="icon-pencil icon-large"></i>Logo Retouch</a></li>
+                        <li><a href="#"><i class="icon-user icon-large"></i>Business Card Design</a></li>
+                        <li><a href="#"><i class="icon-print icon-large"></i>Print Design</a></li>
+                        <li><a href="#"><i class="icon-sitemap icon-large"></i>Web Design</a></li>
+                        <li><a href="#"><i class="icon-magic icon-large"></i>Website Redesign</a></li>
+                        <li><a href="#"><i class="icon-briefcase icon-large"></i>Branding Package</a></li>
+                        <li><a href="#"><i class="icon-thumbs-up icon-large"></i>Social Media Package</a></li>
+                    </ul>
+                </div>
+            ​</div>
+            <p id="projectTitle">Your project is:</p>
+            <h3 id="projectTitlePreview"><span id="projectNamePreview"></span> <span id="productNamePreview"></span> &nbsp;</h3>
+            <textarea placeholder="Enter a brief, yet thorough description of your project..."></textarea>
+            <input type="text" placeholder="Your deadline..." />
+            <input type="text" placeholder="Your budget...." />
+            <button id="newProjectBtn">Create Project</button>
+        </form>
     </div>
 
     <!-- jquery -->

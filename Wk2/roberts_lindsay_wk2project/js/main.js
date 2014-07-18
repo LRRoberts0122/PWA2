@@ -40,7 +40,7 @@
 		
 	/*
 	===============================================
-	======================================== EVENTS	
+	======================================== MODALS
 	*/
     $("#registerBtn").click(function(){
         $("#overlay").fadeIn({queue: false, duration: 500});
@@ -49,10 +49,25 @@
         return false;
     });
 
+    $("#newProject").click(function() {
+        $("#overlay").fadeIn({queue: false, duration: 500});
+        $("#newProjectModal").fadeIn({queue: false, duration: 500});
+        $("#newProjectModal").animate({'top': '20px'}, 500);
+        return false;
+    });
+
     $(".close").click(function(){
         $("#overlay").fadeOut({queue: false, duration: 500});
-        $('#registerModal').fadeOut({queue: false, duration: 350});
-        $("#registerModal").animate({'top': '-575px'}, 500);
+
+        if($("#registerModal")){
+            $('#registerModal').fadeOut({queue: false, duration: 350});
+            $("#registerModal").animate({'top': '-575px'}, 500);
+        }
+
+        if($("#newProjectModal")){
+            $('#newProjectModal').fadeOut({queue: false, duration: 350});
+            $("#newProjectModal").animate({'top': '-575px'}, 500);
+        }
     });
 
 
@@ -60,7 +75,7 @@
     ===============================================
     ========================================== TABS
     */
-    $("#dashboardContentArea .wrapper:not(:nth-child(2))").hide();
+    $("#dashboardContentArea .wrapper:not(:nth-child(1))").hide();
 
     $("#menubar li").click(function(e) {
         e.preventDefault();
@@ -71,7 +86,7 @@
         var clicked = $(this).find("a:first").attr("href");
 
         $(clicked).fadeIn("fast");
-    }).eq(1).addClass("active");
+    }).eq(0).addClass("active");
 
     /*
     ===============================================
@@ -128,6 +143,14 @@
                 obj.val = opt.text();
                 obj.index = opt.index();
                 obj.placeholder.text(obj.val);
+
+                $("#productName").val(obj.val.toString());
+                $("#productNamePreview").html($("#productName").val());
+                $(".wrapper-dropdown span").css({
+                    color: "#444",
+                    fontStyle: "normal",
+                    fontWeight: 500
+                });
             });
         },
         getValue : function() {
@@ -148,6 +171,18 @@
         });
 
     });
+
+
+    /*
+    ===============================================
+    =============================== PROJECT PREVIEW
+    */
+    $("#projectName").on("input", function(){
+        console.log($("#projectName").val());
+        $("#projectNamePreview").html($("#projectName").val());
+    });
+
+
 
 
 })(jQuery); // end private scope

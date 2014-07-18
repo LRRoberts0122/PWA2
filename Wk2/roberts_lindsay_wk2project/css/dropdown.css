@@ -17,11 +17,6 @@
     background: transparent; 
 }
 
-.ddWrapper {
-    *zoom: 1;
-    font-weight: 300;
-}
-
 .ddWrapper:after {
     clear: both;
     content: "";
@@ -37,7 +32,7 @@
     /* Styles */
     background: #eee;
     border-radius: 2px;
-    border: 1px solid rgba(0,0,0,0.15);
+    border: 1px solid #b7b7b7;
     cursor: pointer;
     outline: none;
 
@@ -111,6 +106,7 @@
 
 .wrapper-dropdown span {
     color: #b7b7b7;
+    font-style: italic;
 }
 
 .wrapper-dropdown .dropdown li a {
@@ -152,6 +148,10 @@
 .wrapper-dropdown.active .dropdown {
     opacity: 1;
     pointer-events: auto;
+}
+
+.wrapper-dropdown.active {
+    border: 1px solid #fe9d1c;
 }
 
 /* No CSS3 support */

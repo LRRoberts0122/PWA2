@@ -40,7 +40,7 @@
 		
 	/*
 	===============================================
-	======================================== EVENTS	
+	======================================== MODALS
 	*/
     $("#registerBtn").click(function(){
         $("#overlay").fadeIn({queue: false, duration: 500});
@@ -49,10 +49,25 @@
         return false;
     });
 
+    $("#newProject").click(function() {
+        $("#overlay").fadeIn({queue: false, duration: 500});
+        $("#newProjectModal").fadeIn({queue: false, duration: 500});
+        $("#newProjectModal").animate({'top': '20px'}, 500);
+        return false;
+    });
+
     $(".close").click(function(){
         $("#overlay").fadeOut({queue: false, duration: 500});
-        $('#registerModal').fadeOut({queue: false, duration: 350});
-        $("#registerModal").animate({'top': '-575px'}, 500);
+
+        if($("#registerModal")){
+            $('#registerModal').fadeOut({queue: false, duration: 350});
+            $("#registerModal").animate({'top': '-575px'}, 500);
+        }
+
+        if($("#newProjectModal")){
+            $('#newProjectModal').fadeOut({queue: false, duration: 350});
+            $("#newProjectModal").animate({'top': '-575px'}, 500);
+        }
     });
 
 
@@ -60,18 +75,18 @@
     ===============================================
     ========================================== TABS
     */
-    $("#dashboardContentArea div:not(:nth-child(1))").hide();
+    $("#dashboardContentArea .wrapper:not(:nth-child(1))").hide();
 
     $("#menubar li").click(function(e) {
         e.preventDefault();
-        $("#dashboardContentArea div").hide();
+        $("#dashboardContentArea .wrapper").hide();
 
         $("#menubar .active").removeClass("active");
         $(this).addClass("active");
         var clicked = $(this).find("a:first").attr("href");
 
         $(clicked).fadeIn("fast");
-    }).eq(1).addClass("active");
+    }).eq(0).addClass("active");
 
     /*
     ===============================================
@@ -96,6 +111,78 @@
         $(this).attr("title", $(this).data("tipText"));
         $(".tooltip").remove();
     });
+
+
+    /*
+    ===============================================
+    ====================================== DROPDOWN
+    */
+
+
+
+    function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+    }
+
+    DropDown.prototype = {
+        initEvents : function() {
+            var obj = this;
+
+            obj.dd.on('click', function(event){
+                $(this).toggleClass('active');
+                return false;
+            });
+
+            obj.opts.on('click',function(){
+                var opt = $(this);
+                obj.val = opt.text();
+                obj.index = opt.index();
+                obj.placeholder.text(obj.val);
+
+                $("#productName").val(obj.val.toString());
+                $("#productNamePreview").html($("#productName").val());
+                $(".wrapper-dropdown span").css({
+                    color: "#444",
+                    fontStyle: "normal",
+                    fontWeight: 500
+                });
+            });
+        },
+        getValue : function() {
+            return this.val;
+        },
+        getIndex : function() {
+            return this.index;
+        }
+    };
+
+    $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+            // all dropdowns
+            $('.wrapper-dropdown').removeClass('active');
+        });
+
+    });
+
+
+    /*
+    ===============================================
+    =============================== PROJECT PREVIEW
+    */
+    $("#projectName").on("input", function(){
+        console.log($("#projectName").val());
+        $("#projectNamePreview").html($("#projectName").val());
+    });
+
+
 
 
 })(jQuery); // end private scope

@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Wk2/roberts_lindsay_wk2project/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="10359" max-vertical-offset="15015">
+            <state vertical-scroll-proportion="0.45942408" vertical-offset="10359" max-vertical-offset="15015">
               <caret line="714" column="1" selection-start-line="714" selection-start-column="1" selection-end-line="714" selection-end-column="1" />
               <folding />
             </state>
@@ -46,17 +46,17 @@
       <file leaf-file-name="dashboard.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Wk2/roberts_lindsay_wk2project/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625" vertical-offset="225" max-vertical-offset="3285">
-              <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+            <state vertical-scroll-proportion="-10.0" vertical-offset="225" max-vertical-offset="3285">
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Wk2/roberts_lindsay_wk2project/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02027027" vertical-offset="375" max-vertical-offset="1965">
+            <state vertical-scroll-proportion="-0.625" vertical-offset="375" max-vertical-offset="1965">
               <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
               <folding />
             </state>
@@ -719,14 +719,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Wk2/roberts_lindsay_wk2project/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10359" max-vertical-offset="15015">
-          <caret line="714" column="1" selection-start-line="714" selection-start-column="1" selection-end-line="714" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Wk2/roberts_lindsay_wk2project/css/compressed.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="764">
@@ -743,18 +735,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Wk2/roberts_lindsay_wk2project/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/Wk2/roberts_lindsay_wk2project/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625" vertical-offset="225" max-vertical-offset="3285">
-          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        <state vertical-scroll-proportion="-0.625" vertical-offset="375" max-vertical-offset="1965">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Wk2/roberts_lindsay_wk2project/index.html">
+    <entry file="file://$PROJECT_DIR$/Wk2/roberts_lindsay_wk2project/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02027027" vertical-offset="375" max-vertical-offset="1965">
-          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+        <state vertical-scroll-proportion="-10.0" vertical-offset="225" max-vertical-offset="3285">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wk2/roberts_lindsay_wk2project/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45942408" vertical-offset="10359" max-vertical-offset="15015">
+          <caret line="714" column="1" selection-start-line="714" selection-start-column="1" selection-end-line="714" selection-end-column="1" />
           <folding />
         </state>
       </provider>

@@ -700,7 +700,7 @@ div#registerModal p {
     top: 2px;
     left: 0;
     width: 15px;
-    height: 16px;
+    height: 14px;
     border: 1px solid #bbb;
     border-radius: 30px;
 }
@@ -708,10 +708,22 @@ div#registerModal p {
 input[type="radio"]:checked + label:before {
     content: "\2022";
     text-align: center;
-    line-height: 18px;
+    line-height: 16px;
     font-size: 36px;
     color: #3776b2;
     font-family: "Helvetica",sans-serif;
+}
+
+@-moz-document url-prefix() {
+    input[type="radio"]:checked + label:before {
+        line-height: 20px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type="radio"]:checked + label:before {
+        line-height: 14px;
+    }
 }
 
 .radioText {

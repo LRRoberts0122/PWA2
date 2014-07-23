@@ -13,7 +13,8 @@
 
     <!-- CSS concatenated and minified via ant build script-->
     <link href='http://fonts.googleapis.com/css?family=Signika:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css?v=1">
+    <!--<link rel="stylesheet" href="css/style.css?v=1">-->
+    <link rel="stylesheet" href="css/style.css" />
     <!-- end CSS-->
 </head>
 <body>
@@ -22,7 +23,7 @@
         <div class="wrapper">
             <a id="logo" href="#">Logo</a>
             <div id="toolbar">
-                <p id="welcome">Welcome, <span id="user">Lindsay</span></p><button id="signout" onclick="location.href='index.html'">Sign out</button>
+                <button id="signout" onclick="location.href='index.html'">Sign out</button><p id="welcome">Welcome, <span id="user">Lindsay</span></p>
             </div>
         </div>
     </header>
@@ -34,16 +35,22 @@
         <div id="menubar">
             <div class="wrapper">
                 <h2>Project Dashboard</h2>
-                <ul>
-                    <li>
-                        <a href="#projects">View Projects</a>
-                    </li><li>
-                        <a href="#payments">Make Payment</a>
-                    </li><li>
-                        <a href="#activity">Recent Activity</a>
-                    </li>
-                </ul>
-                <a href="#" id="newProject">New Project <i class="icon-plus icon-resize-small"></i></a>
+                <div id="nav">
+                    <ul>
+                        <li>
+                            <a href="#projects">View Projects</a>
+                        </li><li>
+                            <a href="#payments">Make Payment</a>
+                        </li><li>
+                            <a href="#activity">Recent Activity</a>
+                        </li><li>
+                            <a href="#teams">View Teams</a>
+                        </li><li>
+                            <a href="#tasks">View Tasks</a>
+                        </li>
+                    </ul>
+                    <a href="#" id="newProject">New Project <i class="icon-plus icon-resize-small"></i></a>
+                </div>
             </div>
         </div>
 
@@ -125,6 +132,14 @@
             <div id="activity" class="wrapper">
                 <p>There is nothing to display.</p>
             </div>
+
+            <div id="teams" class="wrapper">
+                <p>There is nothing to display.</p>
+            </div>
+
+            <div id="tasks" class="wrapper">
+                <p>There is nothing to display.</p>
+            </div>
         </div>
     </div>
 
@@ -132,10 +147,11 @@
     <div id="overlay"></div>
 
     <div id="newProjectModal">
+        <a class="close"></a>
         <form id="createProject">
-            <a class="close"></a>
+
             <h3>Create a New Project</h3>
-            <input type="text" placeholder="Project name..." id="projectName" />
+            <input type="text" placeholder="Project / Company name..." id="projectName" />
             <input type="hidden" id="productName" value="" />
             <div class="ddWrapper">
                 <div id="dd" class="wrapper-dropdown" tabindex="1">
@@ -152,14 +168,39 @@
                     </ul>
                 </div>
             ​</div>
-            <p id="projectTitle">Your project is:</p>
-            <h3 id="projectTitlePreview"><span id="projectNamePreview"></span> <span id="productNamePreview"></span> &nbsp;</h3>
-            <textarea placeholder="Enter a brief, yet thorough description of your project..."></textarea>
-            <input type="text" placeholder="Your deadline..." />
-            <input type="text" placeholder="Your budget...." />
-            <input type="hidden" placeholder="">
-            <button id="newProjectBtn">Create Project</button>
+            <textarea id="description" placeholder="Enter a brief, yet thorough description of your project..."></textarea>
+            <input type="text" id="deadline" placeholder="Your deadline..." />
+            <input type="text" id="budget" placeholder="Your budget...." />
+
+            <div class="statusGroup">
+                <p>Project Priority:</p>
+                <input type="radio" id="normal" name="status" value="Normal" class="radio" checked="checked" />
+                <label for="normal"><span class="radioText">Normal</span> <i class="icon-ok"></i></label>
+                <input type="radio" id="urgent" name="status" value="Urgent" class="radio" />
+                <label for="urgent"><span class="radioText">Urgent</span> <i class="icon-flag"></i></label>
+            </div>
+            <input type="hidden" id="phase" value="Discovery" />
+            <button id="newProjectBtn" class="clear">Create Project</button>
         </form>
+
+        <div id="projectPreview">
+            <p id="projectTitle">Your Project Preview:</p>
+            <div id="previewWindow">
+                <h3 id="projectTitlePreview"><span id="projectNamePreview">&nbsp;</span> <span id="productNamePreview"></span></h3> <p class="createdBy">Created <span id="datePreview"></span> by Lindsay Roberts</p>
+                <div id="descriptionPreview">
+                    <b>Description:</b>
+                    <p id="descriptionContent">
+                    </p>
+                    <div id="descriptionFade"></div>
+                </div>
+
+
+                <p><b>Deadline:</b> <span id="deadlinePreview">&nbsp;</span></p>
+                <p><b>Budget:</b> <span id="budgetPreview">&nbsp;</span></p>
+
+                <p id="urgency">The status of this project is <span id="statusPreview"></span></p>
+            </div>
+        </div>
     </div>
 
     <!-- jquery -->

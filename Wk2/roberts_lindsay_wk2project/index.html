@@ -1,32 +1,22 @@
-<!doctype html>  
+<!DOCTYPE HTML>
 
-<!--
-	This is the main index of the application
-	
-	All your script tags should be at the bottom of this file
-	
-	The only html element in the body is the container div
-	Your code should load your page templates into the container
--->
-
-<html lang="en" id="index">
+<html id="index">
 <head>
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<title>Your Title Here</title>
+	<title>CreativeCodeFish | Project Management Login </title>
 	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content="Lindsay Roberts">
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- CSS concatenated and minified via ant build script-->
     <link href='http://fonts.googleapis.com/css?family=Signika:400,300,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/style.css?v=1">
-	<!-- end CSS-->
-	
+	<link rel="stylesheet" href="css/compressed.css">
+
 </head>
 
 <body>
@@ -34,9 +24,11 @@
     <header>
         <div class="wrapper">
             <a id="logo" href="#">Logo</a>
-            <form>
-                <input type="text" id="username" name="username" placeholder="Your username." />
-                <input type="password" id="password" name="password" placeholder="Your password." />
+            <form id="loginForm">
+                <i class="icon-user"></i>
+                <input type="text" id="username" name="username" placeholder="Your username." class="loginTooltip" title="Your cool username." />
+                <i class="icon-key"></i>
+                <input type="password" id="password" name="password" placeholder="Your password." class="loginTooltip" title="Your top-secret password." />
                 <button id="login" onclick="location.href='dashboard.html'">Sign in</button>
             </form>
         </div>
@@ -100,6 +92,18 @@
             <button id="regSubmit">Sign up</button>
         </form>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	<!-- jquery -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Your Title Here</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS concatenated and minified via ant build script-->
+    <link href='http://fonts.googleapis.com/css?family=Signika:400,300,700' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" href="css/style.css?v=1">-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- end CSS-->
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="wrapper">
+            <a id="logo" href="#">Logo</a>
+            <div id="toolbar">
+                <button name="logOut" id="logOut">Sign out</button><p id="welcome">Welcome, <span id="user">Lindsay</span></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard">
+
+        <!-- DASHBOARD MENU -->
+        <div id="menubar">
+            <div class="wrapper">
+                <h2>Project Dashboard</h2>
+                <div id="nav">
+                    <ul>
+                        <li>
+                            <a href="#projects">View Projects</a>
+                        </li><li>
+                            <a href="#payments">Make Payment</a>
+                        </li><li>
+                            <a href="#activity">Recent Activity</a>
+                        </li><li>
+                            <a href="#teams">View Teams</a>
+                        </li><li>
+                            <a href="#tasks">View Tasks</a>
+                        </li>
+                    </ul>
+                    <a href="#" id="newProject">New Project <i class="icon-plus icon-resize-small"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT AREA -->
+        <div id="dashboardContentArea">
+
+            <!-- PROJECTS -->
+            <div id="projects" class="wrapper">
+
+                <!-- FIRST PROJECT -->
+                <div class="dashboardItem">
+                    <div class="dbHeader">
+                        <!-- <h3>[[INSERT TITLE]]</h3> <p>created [[INSERT DATE]] by [[INSERT NAME]]</p> -->
+                        <h3>Dana Robins Logo Design</h3><p>created July 7, 2014 by Dana</p>
+                        <div class="dbLinks">
+                            <p><a href="#">View Project</a> | <a href="#">Cancel Project</a></p>
+                        </div>
+                    </div>
+
+                    <div class="dbDescription dbSection">
+                        <p><b>Description</b></p>
+                        <p>I would like a logo to be designed for my art portfolio.  I have attached some images for further inspiration for my logo design. I would like the logo to be my name, Dana Robins, and have a paint-like texture to it. I prefer a darker color theme, as my artwork is a bit on the dark side of abstract. <a href="#">Edit</a></a></p>
+                    </div>
+
+                    <div class="dbInfo dbSection">
+                        <div class="dbLeft">
+                            <p class="dbSection"><b>Deadline:</b> August 01, 2014 <a href="#">Change Deadline</a></p>
+                            <p><b>Recent Activity</b></p>
+                            <p>Lindsay uploaded <a href="#">First Draft</a></p>
+                        </div>
+
+                        <div class="dbRight">
+                            <p class="dbSection"><b>Balance:</b> <span class="balance">$475</span> <a href="#">View Invoice</a></p>
+                            <p><b>Payments:</b></p>
+                            <p>Received Deposit of <span class="depositReceived">$75</span> on July 07, 2014 <a href="#">View Receipt</a></p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <!-- SECOND PROJECT -->
+                <div class="dashboardItem">
+                    <div class="dbHeader">
+                        <!-- <h3>[[INSERT TITLE]]</h3> <p>created [[INSERT DATE]] by [[INSERT NAME]]</p> -->
+                        <h3>Dana Robins Web Design</h3><p>created July 11, 2014 by Dana</p>
+                        <div class="dbLinks">
+                            <p><a href="#">View Project</a> | <a href="#">Cancel Project</a></p>
+                        </div>
+                    </div>
+
+                    <div class="dbDescription dbSection">
+                        <p><b>Description</b></p>
+                        <p>I would like a website for my portfolio. I need a home page that features the newest exhibits, a gallery showcasing all of my work, a page for upcoming exhibits, an about page, and finally a contact page. I would like for the styling of the website to be the same as described in the Logo Design project.  <a href="#">Edit</a></a></p>
+                    </div>
+
+                    <div class="dbInfo dbSection">
+                        <div class="dbLeft">
+                            <p class="dbSection"><b>Deadline:</b> October 28, 2014 <a href="#">Change Deadline</a></p>
+                            <p><b>Recent Activity</b></p>
+                            <p>There is no recent activity.</p>
+                        </div>
+
+                        <div class="dbRight">
+                            <p class="dbSection"><b>Balance:</b> <span class="balance">$2,750</span> <a href="#">View Invoice</a></p>
+                            <p><b>Payments:</b></p>
+                            <p><span class="depositDue">$399</span> Deposit due on July 22, 2014 <a href="#">Make Payment</a></p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <p>There are no other projects.</p>
+            </div> <!-- End Projects -->
+
+            <div id="payments" class="wrapper">
+                <p>There are no payments due at this time.</p>
+            </div>
+
+            <div id="activity" class="wrapper">
+                <p>There is nothing to display.</p>
+            </div>
+
+            <div id="teams" class="wrapper">
+                <p>There is nothing to display.</p>
+            </div>
+
+            <div id="tasks" class="wrapper">
+                <p>There is nothing to display.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW PROJECT MODAL -->
+    <div id="overlay"></div>
+
+    <div id="newProjectModal">
+        <a class="close"></a>
+        <form id="createProject">
+
+            <h3>Create a New Project</h3>
+            <input type="text" placeholder="Project / Company name..." id="projectName" />
+            <input type="hidden" id="productName" value="" />
+            <div class="ddWrapper">
+                <div id="dd" class="wrapper-dropdown" tabindex="1">
+                    <span>Select your product...</span>
+                    <ul class="dropdown">
+                        <li><a href="#"><i class="icon-star icon-large"></i>Logo Design</a></li>
+                        <li><a href="#"><i class="icon-pencil icon-large"></i>Logo Retouch</a></li>
+                        <li><a href="#"><i class="icon-user icon-large"></i>Business Card Design</a></li>
+                        <li><a href="#"><i class="icon-print icon-large"></i>Print Design</a></li>
+                        <li><a href="#"><i class="icon-sitemap icon-large"></i>Web Design</a></li>
+                        <li><a href="#"><i class="icon-magic icon-large"></i>Website Redesign</a></li>
+                        <li><a href="#"><i class="icon-briefcase icon-large"></i>Branding Package</a></li>
+                        <li><a href="#"><i class="icon-thumbs-up icon-large"></i>Social Media Package</a></li>
+                    </ul>
+                </div>
+            ​</div>
+            <textarea id="description" placeholder="Enter a brief, yet thorough description of your project..."></textarea>
+            <input type="text" id="deadline" placeholder="Your deadline..." />
+            <input type="text" id="budget" placeholder="Your budget...." />
+
+            <div class="statusGroup">
+                <p>Project Priority:</p>
+                <input type="radio" id="normal" name="status" value="Normal" class="radio" checked="checked" />
+                <label for="normal"><span class="radioText">Normal</span> <i class="icon-ok"></i></label>
+                <input type="radio" id="urgent" name="status" value="Urgent" class="radio" />
+                <label for="urgent"><span class="radioText">Urgent</span> <i class="icon-flag"></i></label>
+            </div>
+            <input type="hidden" id="phase" value="Discovery" />
+            <button id="newProjectBtn" class="clear">Create Project</button>
+        </form>
+
+        <div id="projectPreview">
+            <p id="projectTitle">Your Project Preview:</p>
+            <div id="previewWindow">
+                <h3 id="projectTitlePreview"><span id="projectNamePreview">&nbsp;</span> <span id="productNamePreview"></span></h3> <p class="createdBy">Created <span id="datePreview"></span> by Lindsay Roberts</p>
+                <div id="descriptionPreview">
+                    <b>Description:</b>
+                    <p id="descriptionContent">
+                    </p>
+                    <div id="descriptionFade"></div>
+                </div>
+
+
+                <p><b>Deadline:</b> <span id="deadlinePreview">&nbsp;</span></p>
+                <p><b>Budget:</b> <span id="budgetPreview">&nbsp;</span></p>
+
+                <p id="urgency">The status of this project is <span id="statusPreview"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- plugins -->
+
+
+    <!-- main -->
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

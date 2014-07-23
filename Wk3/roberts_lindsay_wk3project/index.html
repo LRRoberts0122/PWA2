@@ -26,10 +26,10 @@
             <a id="logo" href="#">Logo</a>
             <form id="loginForm">
                 <i class="icon-user"></i>
-                <input type="text" id="username" name="username" placeholder="Your username." class="loginTooltip" title="Your cool username." />
+                <input type="text" id="user" name="signinButton" placeholder="Your username." class="loginTooltip" title="Your cool username." />
                 <i class="icon-key"></i>
-                <input type="password" id="password" name="password" placeholder="Your password." class="loginTooltip" title="Your top-secret password." />
-                <button id="login" onclick="location.href='dashboard.html'">Sign in</button>
+                <input type="password" id="pass" name="signinButton" placeholder="Your password." class="loginTooltip" title="Your top-secret password." />
+                <button id="signinButton" name="signinButton">Sign in</button>
             </form>
         </div>
     </header>
@@ -66,8 +66,8 @@
                     <h3>Still not convinced?</h3>
                     <p>Contact us for more info, and a <em>free</em> quote.</p>
 
-                    <input type="text" id="name" name="name" placeholder="Your name." />
-                    <input type="email" id="email" name="email" placeholder="Your email." />
+                    <input type="text" id="contactName" name="contactName" placeholder="Your name." />
+                    <input type="email" id="contactEmail" name="contactEmail" placeholder="Your email." />
                     <textarea id="message" name="message" placeholder="Your message. Include budget, project info, and deadlines."></textarea>
                     <button id="quote">Get a free quote</button>
                 </form>
@@ -80,16 +80,16 @@
     <div id="overlay"></div>
 
     <div id="registerModal">
-        <form>
+        <form id="registerForm">
             <a class="close"></a>
             <h3>Register Today! - It's FREE!</h3>
             <p>Registering only takes seconds, and puts you into direct contact with a designer. On top of all that, you can add documents, images, and other files to your project dashboard. What are you waiting for? It's free!</p>
             <img src="images/formfish.png" alt="Goldy the goldfish helps users register. It looks like he stepped out for a minute. Sorry about that!" />
             <input type="text" id="name" name="name" placeholder="Your full name." title="We just need your first and last name." class="masterTooltip" />
             <input type="email" id="email" name="email" placeholder="Your email." title="We won't send you spam. Pinky swear." class="masterTooltip"  />
-            <input type="text" id="username" name="username" placeholder="Your username." title="Your username must be unique." class="masterTooltip" />
+            <input type="text" id="userName" name="userName" placeholder="Your username." title="Your username must be unique." class="masterTooltip" />
             <input type="password" id="password" name="password" placeholder="Your password." title="Make your password hard to guess." class="masterTooltip" />
-            <button id="regSubmit">Sign up</button>
+            <button id="register">Sign up</button>
         </form>
     </div>
 

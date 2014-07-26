@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery.getJSON demo</title>
+    <style>
+        img {
+            height: 100px;
+            float: left;
+        }
+    </style>
+
+</head>
+<body>
+<div id="images"></div>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    (function($) { // Our self-executing function :)
+        var flickerAPI = "http://api.flickr.com/services/feeds/photos_public..."; // This is the request url which retrieves data from the API
+        $.getJSON( flickerAPI, { // getJSON is a built-in AJAX method that allows us to get JSON from somewhere else...
+            tags: "mount rainier", // key and parameter we want to query for
+            tagmode: "any", // key and parameter we want to query for
+            format: "json" // key and parameter we want to query for
+
+            // The parameters we are passing is the request url and an object containing the keys and values that we want to retrieve
+            // In this case, we want the tags to be "mount rainier", "tagmode" to be "any, and "format" to be "json"
+        })
+                .done(function( data ) { // This is the callback function, which will run after we've retrieved the data
+                    $.each( data.items, function( i, item ) { // For each item, or result in the data that was returned...
+                        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" ); // We will append it (the image/result) to the "images" container
+                        if ( i === 3 ) { // if "i" is equal to 3...
+                            return false; // we are returning false, which means we will no longer be inserting images
+                        } // Leaving 4 images inside of the "images" container
+                    });
+                });
+    })(jQuery); // Passing the jQuery parameter, so our JavaScript knows the $ variable is for jQuery code, and not PHP, or some other language.
+</script>
+</body>
+</html>

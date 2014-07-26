@@ -1,6 +1,6 @@
 /*  
-	Your Project Title
-	Author: You
+	Creative Code Fish
+	Author: Lindsay R.
 */
 
 (function($){
@@ -42,29 +42,29 @@
 	===============================================
 	======================================== MODALS
 	*/
-    $("#registerBtn").click(function(){
+    $("#registerBtn").click(function(e){
         $("#overlay").fadeIn({queue: false, duration: 500});
         $("#registerModal").fadeIn({queue: false, duration: 500});
         $("#registerModal").animate({'top': '20px'}, 500);
-        return false;
+        e.preventDefault();
     });
 
-    $("#newProject").click(function() {
+    $("#newProject").click(function(e) {
         $("#overlay").fadeIn({queue: false, duration: 500});
         $("#newProjectModal").fadeIn({queue: false, duration: 500});
         $("#newProjectModal").animate({'top': '20px'}, 500);
-        return false;
+        e.preventDefault();
     });
 
     $(".close").click(function(){
         $("#overlay").fadeOut({queue: false, duration: 500});
 
-        if($("#registerModal")){
+        if($("#registerModal").length > 0){
             $('#registerModal').fadeOut({queue: false, duration: 350});
             $("#registerModal").animate({'top': '-575px'}, 500);
         }
 
-        if($("#newProjectModal")){
+        if($("#newProjectModal").length > 0){
             $('#newProjectModal').fadeOut({queue: false, duration: 350});
             $("#newProjectModal").animate({'top': '-575px'}, 500);
 
@@ -231,14 +231,15 @@
 
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var date = new Date();
-    $("#datePreview").html(months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear());
+    var dateString = months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
+    $("#datePreview").html(dateString);
 
 
     function populateModal() {
         $("#projectNamePreview").html($("#projectName").val());
         var description = $("#description").val();
-        description = description.replace(/\r?\n/g, '<br />');
-        $("#descriptionContent").html(description);
+        var content = description.replace(/\r?\n/g, '<br />');
+        $("#descriptionContent").html(content);
         $("#deadlinePreview").html($("#deadline").val());
         $("#budgetPreview").html($("#budget").val());
         $("#datePreview").html(months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear());
@@ -267,7 +268,6 @@
         e.preventDefault(true);
         var user = $("#user").val();
         var pass = $("#pass").val();
-        console.log("Password working!");
 
         $.ajax({
             url: "xhr/login.php",
@@ -278,7 +278,6 @@
                 password: pass
             },
             success: function(response){
-                console.log("Test User");
                 if(response.error){
                     alert(response.error);
                 }else{
@@ -286,32 +285,219 @@
                 }
             }
         });
-
-        /*
-        ======================================
-        =============================== LOGOUT
-        */
-        $("#logOut").click(function(e){
-            e.preventDefault(true);
-            $.get("xhr/logout.php", function(){
-                window.location.assign("index.html")
-            });
-        });
-
-
-        /*
-        ========================================
-        =============================== REGISTER
-        */
-        $(document).ready(function(){
-            $("#register").on("click", function(e){
-                e.preventDefault();
-                alert("Hello!");
-            });
-        });
-
-
     });
 
+
+    /*
+    ======================================
+    =============================== LOGOUT
+    */
+    $("#logOut").click(function(e){
+        e.preventDefault();
+        $.get("xhr/logout.php", function(){
+           window.location.assign("index.html");
+        });
+    });
+
+    /*
+    ========================================
+    =============================== REGISTER
+    */
+    $("#register").on("click", function(e){
+        e.preventDefault();
+
+        var name = $("#name").val();
+        var ret = name.split(" ");
+        var fName = ret[0];
+        var lName = ret[1];
+
+        var firstname = fName,
+            lastname = lName,
+            username = $("#userName").val(),
+            email = $("#email").val(),
+            password = $("#password").val();
+
+        $.ajax({
+            url: "xhr/register.php",
+            type: "post",
+            dataType: "json",
+            data: {
+                firstname: firstname,
+                lastname: lastname,
+                username: username,
+                email: email,
+                password: password
+            },
+
+            success: function(response){
+                if(response.error){
+                    alert(response.error);
+                }else{
+                    window.location.assign("dashboard.html");
+                }
+            }
+        });
+    });
+
+
+
+
+    /*
+    ================================================
+    =============================== DISPLAY USERNAME
+    */
+
+    var currentUser = "";
+
+    var greetings = function() {
+        $.ajax({
+            url: "xhr/get_user.php",
+            type: "GET",
+            dataType: "json",
+            success: function(response){
+                if(response.error){
+                    alert(response.error);
+                } else {
+                    currentUser = response.user.first_name + " " + response.user.last_name;
+                    $("#user").html(response.user.first_name);
+                }
+            }
+        });
+    };
+
+
+
+
+    /*
+    ================================================
+    =============================== DISPLAY PROJECTS
+    */
+    var projects = function() {
+        $.ajax({
+            url: "xhr/get_projects.php",
+            type: "GET",
+            dataType: "json",
+            success: function(response){
+                if(response.error){
+                    alert(response.error);
+                }else{
+                    if(response.projects.length < 1) {
+                        $("#projects").append("<p>There are no projects to display. Create one!</p>");
+                    }else{
+                        for(var i= 0, j=response.projects.length; i < j; i++){
+                            var price = ~~(Math.random() * 999 + 100);
+                            var result = response.projects[i];
+                            var dueDate = result.dueDate;
+                            if(dueDate == null || dueDate == "null"){
+                                dueDate = "N/A";
+                            }
+
+                            $("#projects").append(
+                                "<div class=\"dashboardItem\">" +
+                                    "<div class=\"dbHeader\">" +
+                                    "<h3>" + result.projectName + "</h3>" +
+                                    "<p>created on " + dateString + "</p>" +
+                                    "<div class=\"dbLinks\">" +
+                                    "<p><a href=\"#\">View Project</a> | <a href=\"#\" id=\"" + result.id + "\" class=\"delProject\">Cancel Project</a></p></div></div>" +
+                                    "<div class=\"dbDescription dbSection\">" +
+                                    "<p><b>Description</b></p>" +
+                                    "<p>" + result.projectDescription + "</p></div>" +
+                                    "<div class=\"dbInfo dbSection\">" +
+                                    "<div class=\"dbLeft\">" +
+                                    "<p class=\"dbSection\"><b>Deadline:</b> " + dueDate + " <a href=\"#\">Change Deadline</a></p>" +
+                                    "<p><b>Project Status:</b></p><p>This project's status is " + result.status + ". <a href=\"#\">Change Status</a></p></div>" +
+                                    "<div class=\"dbRight\">" +
+                                    "<p class=\"dbSection\"><b>Balance:</b> <span class=\"balance\">$" + price + "</span> <a href=\"#\">View Invoice</a>" +
+                                    "<p><b>Payments</b></p>" +
+                                    "<p>There are no payments due at this time.</p></div></div>" +
+                                    "<div class=\"clear\"></div></div>"
+                            );
+                        }
+
+                        $(".delProject").on("click", function(e){
+                            // Put in a check here if you have time...
+                            e.preventDefault();
+                            $.ajax({
+                                url: "xhr/delete_project.php",
+                                data: {
+                                    projectID: e.target.id
+                                },
+                                type: "POST",
+                                dataType: "json",
+                                success: function(resp){
+                                    if(resp.error){
+                                        alert(resp.error);
+                                    }else{
+                                        $("#projects").html(" ");
+                                        projects();
+                                    }
+                                }
+                            });
+                        });
+                        $("#projects").append("<p>There are no other projects.</p>");
+                    }
+                }
+            }
+        })
+    };
+
+    /*
+    ===============================================
+    =============================== CREATE PROJECTS
+    */
+
+
+    $("#newProjectBtn").on("click", function(e){
+        e.preventDefault();
+
+        var projName = $("#projectName").val() + " " + $("#productName").val(),
+            projDesc = $("#description").val(),
+            projDue = $("#deadline").val(),
+            status = $("input[name=\"status\"]:checked").prop("value");
+
+        $.ajax({
+            url: "xhr/new_project.php",
+            type: "post",
+            dataType: "json",
+            data: {
+                projectName: projName,
+                projectDescription: projDesc,
+                dueDate: projDue,
+                status: status,
+                startDate: dateString
+            },
+
+            success: function(response){
+                if(response.error){
+                    alert(response.error);
+                }else{
+                    $("#createProject").trigger("reset");
+                    $("#dd span").html("Select your product...");
+                    $("#dd span").removeAttr("style");
+                    populateModal();
+                    $("#projects").html(" ");
+                    projects();
+                    $('#newProjectModal').fadeOut({queue: false, duration: 350});
+                    $("#newProjectModal").animate({'top': '-575px'}, 500);
+                    $("#overlay").fadeOut({queue: false, duration: 500});
+                }
+            }
+        });
+    });
+
+
+    /*
+    ===============================================
+    =============================== DELETE PROJECTS
+    */
+
+
+
+if($("#dashboard").length){
+    greetings();
+    projects();
+}
+// Create new client when user registers...
+// Store client number when user creates project...
 })(jQuery); // end private scope
 

@@ -4,8 +4,6 @@
 */
 
 (function($){
-
-
 	/*
 	===============================================
 	========================= APPLICATION FUNCTIONS	
@@ -438,8 +436,17 @@
                         }
 
                         $(".delProject").on("click", function(e){
-                            // Put in a check here if you have time...
                             e.preventDefault();
+
+                            $("document").ready(function() {
+                                var el = e.target, i = 4;
+                                while(i-- && (el = el.parentNode));
+
+                                $(el);
+
+                                $(el).hide("explode", 350);
+                            });
+                            
                             $.ajax({
                                 url: "xhr/delete_project.php",
                                 data: {
@@ -456,6 +463,7 @@
                                     }
                                 }
                             });
+
                         });
                         $("#projects").append("<p>There are no other projects.</p>");
                     }

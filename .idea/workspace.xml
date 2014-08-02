@@ -23,26 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dashboard.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.375" vertical-offset="405" max-vertical-offset="3315">
-              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1860">
-              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="font-awesome.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/css/font-awesome.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -54,39 +34,16 @@
         </entry>
       </file>
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/js/main.js">
+        <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29166666" vertical-offset="4155" max-vertical-offset="8100">
-              <caret line="291" column="29" selection-start-line="291" selection-start-column="29" selection-end-line="291" selection-end-column="29" />
+            <state vertical-scroll-proportion="-2.2787957" vertical-offset="7201" max-vertical-offset="7965">
+              <caret line="367" column="23" selection-start-line="367" selection-start-column="23" selection-end-line="367" selection-end-column="23" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1406944142000" expanded="true" signature="8295:8510" placeholder="..." />
-                <marker date="1406944142000" expanded="true" signature="8295:8551" placeholder="..." />
-                <marker date="1406944142000" expanded="true" signature="8295:8662" placeholder="..." />
-                <marker date="1406944142000" expanded="true" signature="8738:8753" placeholder="..." />
-                <marker date="1406944142000" expanded="true" signature="8788:8802" placeholder="..." />
-                <marker date="1406944142000" expanded="true" signature="8844:8858" placeholder="..." />
+                <marker date="1406948557000" expanded="true" signature="8175:8542" placeholder="..." />
+                <marker date="1406948557000" expanded="true" signature="8618:8633" placeholder="..." />
+                <marker date="1406948557000" expanded="true" signature="8668:8682" placeholder="..." />
+                <marker date="1406948557000" expanded="true" signature="8724:8738" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-ui.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/js/jquery-ui.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.692308" vertical-offset="10944" max-vertical-offset="16005">
-              <caret line="762" column="23" selection-start-line="762" selection-start-column="23" selection-end-line="762" selection-end-column="23" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -135,7 +92,6 @@
         <option value="$PROJECT_DIR$/Wk3/roberts_lindsay_wk3activity/Part1/0106/start/ziptastic.html" />
         <option value="$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/js/jquery-ui.js" />
         <option value="$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/dashboard.html" />
-        <option value="$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/js/main.js" />
         <option value="$PROJECT_DIR$/Wk4/roberts_lindsay_wk3project/dashboard.html" />
         <option value="$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/test.html" />
         <option value="$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/css/jquery-ui.theme.css" />
@@ -144,11 +100,12 @@
         <option value="$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/index.html" />
         <option value="$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/css/style.css" />
         <option value="$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/js/main.js" />
+        <option value="$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/js/main.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="66" />
+    <option name="x" value="62" />
     <option name="y" value="22" />
     <option name="width" value="1378" />
     <option name="height" value="874" />
@@ -179,6 +136,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -233,46 +191,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wk4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="roberts_lindsay_wk3projectb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wk4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="roberts_lindsay_wk3projectb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -291,29 +209,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="roberts_lindsay_wk3projectb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PWA2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wk4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="roberts_lindsay_wk3projectb" />
+              <option name="myItemId" value="roberts_lindsay_wk4project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -355,7 +251,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,14 +272,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -395,14 +282,12 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
       <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -410,6 +295,16 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -433,7 +328,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="22" width="1378" height="874" extended-state="0" />
+    <frame x="62" y="22" width="1378" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -448,11 +343,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -681,7 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5497382" vertical-offset="6525" max-vertical-offset="15510">
           <caret line="463" column="13" selection-start-line="463" selection-start-column="13" selection-end-line="463" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,7 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="3225">
           <caret line="25" column="27" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -711,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32198954" vertical-offset="10329" max-vertical-offset="15510">
           <caret line="705" column="18" selection-start-line="705" selection-start-column="15" selection-end-line="705" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,15 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9391892" vertical-offset="6070" max-vertical-offset="6855">
           <caret line="451" column="7" selection-start-line="451" selection-start-column="7" selection-end-line="451" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6240" max-vertical-offset="7830">
-          <caret line="416" column="73" selection-start-line="416" selection-start-column="73" selection-end-line="416" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6240">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -755,51 +637,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/js/jquery-ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8985" max-vertical-offset="242310">
-          <caret line="607" column="28" selection-start-line="607" selection-start-column="28" selection-end-line="607" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1406930521000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1406930521000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1406930521000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1406930521000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1406930521000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-158.125" vertical-offset="120" max-vertical-offset="4290">
           <caret line="261" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/images/ui-bg_diagonals-small_25_c5ddfc_40x40.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/images/ui-bg_diagonals-thick_20_e69700_40x40.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1860">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -812,42 +653,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/js/jquery-ui.min.js">
+    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk4project/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="764">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.692308" vertical-offset="10944" max-vertical-offset="16005">
-          <caret line="762" column="23" selection-start-line="762" selection-start-column="23" selection-end-line="762" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.375" vertical-offset="405" max-vertical-offset="3315">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wk4/roberts_lindsay_wk3projectb/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29166666" vertical-offset="4155" max-vertical-offset="8100">
-          <caret line="291" column="29" selection-start-line="291" selection-start-column="29" selection-end-line="291" selection-end-column="29" />
+        <state vertical-scroll-proportion="-2.2787957" vertical-offset="7201" max-vertical-offset="7965">
+          <caret line="367" column="23" selection-start-line="367" selection-start-column="23" selection-end-line="367" selection-end-column="23" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1406944142000" expanded="true" signature="8295:8510" placeholder="..." />
-            <marker date="1406944142000" expanded="true" signature="8295:8551" placeholder="..." />
-            <marker date="1406944142000" expanded="true" signature="8295:8662" placeholder="..." />
-            <marker date="1406944142000" expanded="true" signature="8738:8753" placeholder="..." />
-            <marker date="1406944142000" expanded="true" signature="8788:8802" placeholder="..." />
-            <marker date="1406944142000" expanded="true" signature="8844:8858" placeholder="..." />
+            <marker date="1406948557000" expanded="true" signature="8175:8542" placeholder="..." />
+            <marker date="1406948557000" expanded="true" signature="8618:8633" placeholder="..." />
+            <marker date="1406948557000" expanded="true" signature="8668:8682" placeholder="..." />
+            <marker date="1406948557000" expanded="true" signature="8724:8738" placeholder="..." />
           </folding>
         </state>
       </provider>

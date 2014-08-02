@@ -6,7 +6,6 @@
 (function($){
 
 
-//    $("#projects").disableSelection();
 	/*
 	===============================================
 	========================= APPLICATION FUNCTIONS	
@@ -19,8 +18,6 @@
 			type: 'get',
 			dataType: 'json',
 			success: function(response){
-				// if user, loadApp()
-				// if error, loadLanding()
 			}
 		});
 	};
@@ -31,7 +28,6 @@
 	//	SETUP FOR INIT
 		
 	var init = function(){
-	
 		checkLoginState();
 	};
 	
@@ -139,13 +135,12 @@
             $(".userpassTooltip").remove();
         });
     });
+
+
     /*
     ===============================================
     ====================================== DROPDOWN
     */
-
-
-
     function DropDown(el) {
         this.dd = el;
         this.placeholder = this.dd.children('span');
@@ -198,7 +193,7 @@
 
     });
 
-    $("#deadline").datepicker();
+
     /*
     ===============================================
     =============================== PROJECT PREVIEW
@@ -212,10 +207,6 @@
         var text = $("#description").val();
         text = text.replace(/\r?\n/g, '<br />');
         $("#descriptionContent").html(text);
-    });
-
-    $("#deadline").on("input", function(){
-        $("#deadlinePreview").html($("#deadline").val());
     });
 
     $("#budget").on("input", function(){
@@ -232,7 +223,7 @@
 
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var date = new Date();
-    var dateString = date.getDate() + " " + months[date.getMonth()] + ", " + date.getFullYear();
+    var dateString = months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
     $("#datePreview").html(dateString);
 
 
@@ -260,11 +251,11 @@
         }
     }
 
+
     /*
     =====================================
     =============================== LOGIN
     */
-
     $("#signinButton").click(function(e){
         e.preventDefault(true);
         var user = $("#user").val();
@@ -280,13 +271,41 @@
             },
             success: function(response){
                 if(response.error){
-                    alert(response.error);
+                    displayError(response.error);
                 }else{
                     window.location.assign("dashboard.html");
                 }
             }
         });
     });
+
+
+    /*
+    ======================================
+    ======================== DISPLAY ERROR
+    */
+    function displayError(err){
+        if($(".error").length){
+            $(".error").remove();
+        }
+
+        $("body").append(
+                "<div class=\"ui-widget error\" style=\"background: url('images/ui-bg_diagonals-thick_20_e69700_40x40.png'); width: 960px; padding: 8px 0; border-radius: 2px; position: absolute; top: 90px; left: 50%; margin-left: -480px; text-align: center; z-index: 150; -webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.25); -moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.25); box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.25); \">" +
+                "<div class=\"ui-state-error ui-corner-all\" style=\"padding: 0 .7em\">" +
+                "<p style=\"color: #fefefe\"><i class=\"icon-warning-sign\" style=\"padding: 0 5px\"></i>" +
+                "<strong>Error:</strong> " + err + "</p>" +
+                "</div>" +
+                "</div>");
+
+        $("document").ready(function (){
+            $(".error").effect("shake", {
+                times: 3,
+                distance: 20
+            });
+        });
+
+        $(".error").delay(3500).fadeOut("slow");
+    }
 
 
     /*
@@ -299,6 +318,7 @@
            window.location.assign("index.html");
         });
     });
+
 
     /*
     ========================================
@@ -332,7 +352,7 @@
 
             success: function(response){
                 if(response.error){
-                    alert(response.error);
+                    displayError(response.error);
                 }else{
                     window.location.assign("dashboard.html");
                 }
@@ -344,10 +364,9 @@
 
 
     /*
-    ================================================
-    =============================== DISPLAY USERNAME
+    ========================================
+    ======================= DISPLAY USERNAME
     */
-
     var currentUser = "";
 
     var greetings = function() {
@@ -357,7 +376,7 @@
             dataType: "json",
             success: function(response){
                 if(response.error){
-                    alert(response.error);
+                    displayError(response.error);
                 } else {
                     currentUser = response.user.first_name + " " + response.user.last_name;
                     $("#user").html(response.user.first_name);
@@ -370,8 +389,8 @@
 
 
     /*
-    ================================================
-    =============================== DISPLAY PROJECTS
+    ========================================
+    ======================= DISPLAY PROJECTS
     */
     var projects = function() {
         $.ajax({
@@ -380,7 +399,7 @@
             dataType: "json",
             success: function(response){
                 if(response.error){
-                    alert(response.error);
+                    displayError(response.error);
                 }else{
                     if(response.projects.length < 1) {
                         $("#projects").append("<p>There are no projects to display. Create one!</p>");
@@ -413,8 +432,6 @@
                                     "<p>There are no payments due at this time.</p></div></div>" +
                                     "<div class=\"clear\"></div></div>"
                             );
-
-                            $("#projects").sortable().disableSelection();
                         }
 
                         $(".delProject").on("click", function(e){
@@ -429,7 +446,7 @@
                                 dataType: "json",
                                 success: function(resp){
                                     if(resp.error){
-                                        alert(resp.error);
+                                        displayError(resp.error);
                                     }else{
                                         $("#projects").html(" ");
                                         projects();
@@ -437,20 +454,18 @@
                                 }
                             });
                         });
-
-//                        $("#projects").append("<p>There are no other projects.</p>");
+                        $("#projects").append("<p>There are no other projects.</p>");
                     }
                 }
             }
         })
     };
 
+
     /*
-    ===============================================
-    =============================== CREATE PROJECTS
+    ========================================
+    ======================== CREATE PROJECTS
     */
-
-
     $("#newProjectBtn").on("click", function(e){
         e.preventDefault();
 
@@ -473,7 +488,7 @@
 
             success: function(response){
                 if(response.error){
-                    alert(response.error);
+                    displayError(response.error);
                 }else{
                     $("#createProject").trigger("reset");
                     $("#dd span").html("Select your product...");
@@ -491,26 +506,23 @@
 
 
     /*
-    ===============================================
-    =============================== DELETE PROJECTS
+    =======================================
+    ================================== MISC
     */
-
-
-
     if($("#dashboard").length){
         greetings();
         projects();
     }
 
-//    $("#projects").sortable();
-//    $("#projects").disableSelection();
+    $("document").ready(function() {
+        $("#projects").sortable({items: "> div"});
+        $("#projects").disableSelection();
 
-//    $("document").ready(function() {
-//        $("#projects").sortable();
-//        $("#projects").disableSelection();
-//    });
-
-// Create new client when user registers...
-// Store client number when user creates project...
+        $("#deadline").datepicker({
+            onSelect: function(dateText) {
+                $("#deadlinePreview").html($("#deadline").val());
+            }
+        });
+    });
 })(jQuery); // end private scope
 

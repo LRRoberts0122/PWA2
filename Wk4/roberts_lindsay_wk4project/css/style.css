@@ -760,7 +760,7 @@ input[type="radio"]:checked + label:before {
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     input[type="radio"]:checked + label:before {
-        line-height: 14px;
+        line-height: 16px;
     }
 }
 
@@ -812,8 +812,42 @@ button:hover {
     cursor: pointer;
 }
 
+#ui-datepicker-div {
+    padding: 7px 0px;
+    background: #eee;
+    border: 1px solid #b3b3b3;
+    border-radius: 2px;
+}
+
+.ui-datepicker-next, .ui-datepicker-prev {
+    padding: 0px 7px;
+}
+.ui-datepicker-next {
+    float: right;
+    cursor: pointer;
+}
+
+.ui-datepicker-prev {
+    cursor: pointer;
+}
 
 
+
+#ui-datepicker-div th, #ui-datepicker-div td {
+    padding: 4px 6px;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+    padding: 7px 0px;
+    background: #3776b2;
+    color: #FFF;
+    margin: 6px 0px;
+}
+
+.ui-datepicker-calendar {
+    margin: 0px 4px;
+}
 /****** PLACEHOLDER STYLES ******/
 ::-webkit-input-placeholder {
     color: #b7b7b7;
@@ -983,7 +1017,6 @@ section#CTA a:active::before {
     border-right: 6px solid transparent;
     border-left: 6px solid transparent;
 }
-
 
 /* FONT */
 @font-face {

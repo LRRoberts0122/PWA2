@@ -202,11 +202,14 @@
         $("#projectNamePreview").html($("#projectName").val());
     });
 
-
     $("#description").on("input", function(){
         var text = $("#description").val();
         text = text.replace(/\r?\n/g, '<br />');
         $("#descriptionContent").html(text);
+    });
+
+    $("#deadline").keypress(function(event){
+        event.preventDefault();
     });
 
     $("#budget").on("input", function(){
